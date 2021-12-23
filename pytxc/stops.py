@@ -15,7 +15,8 @@ class AnnotatedStopPointRef(BaseModel):
 
     @classmethod
     def from_element(cls, element: Element):
-        if (location := element.find("./txc:Location")) is not None:
+        location = element.find("./txc:Location")
+        if location is not None:
             location = Location.from_element(location)
         return cls(
             stop_point_ref=element.find_text("./txc:StopPointRef"),
