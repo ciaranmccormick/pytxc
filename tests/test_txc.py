@@ -85,7 +85,9 @@ def test_txc_attributes():
     """
     expected = {
         "creation_date_time": datetime.fromisoformat("2020-11-22T11:00:00"),
-        "file_name": "35st-None--SCTE-ST-2021-12-12-TXC_SOT_PB_ALL_20211121-BODS_V1_1.xml",
+        "file_name": (
+            "35st-None--SCTE-ST-2021-12-12-TXC_SOT_PB_ALL_20211121-BODS_V1_1.xml"
+        ),
         "modification": "revise",
         "modification_date_time": datetime.fromisoformat("2021-12-17T11:08:35"),
         "revision_number": 159,
