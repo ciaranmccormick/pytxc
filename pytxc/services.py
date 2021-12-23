@@ -1,10 +1,9 @@
 from datetime import date
 from typing import Iterable, Optional
 
-from lxml.etree import _Element
 from pydantic import BaseModel
 
-from .constants import NAMESPACES
+from .txc import Element
 
 
 class OperatingPeriod(BaseModel):
@@ -12,10 +11,10 @@ class OperatingPeriod(BaseModel):
     start_date: date
 
     @classmethod
-    def from_element(cls, element: _Element):
+    def from_element(cls, element: Element):
         return cls(
-            end_date=element.findtext("./txc:EndDate", namespaces=NAMESPACES),
-            start_date=element.findtext("./txc:StartDate", namespaces=NAMESPACES),
+            end_date=element.find_text("./txc:EndDate"),
+            start_date=element.find_text("./txc:StartDate"),
         )
 
 
@@ -26,14 +25,14 @@ class Line(BaseModel):
     outbound_description: str
 
     @classmethod
-    def from_element(cls, element: _Element):
+    def from_element(cls, element: Element):
         id_ = element.attrib.get("id")
-        line_name = element.findtext("./txc:LineName", namespaces=NAMESPACES)
-        outbound_description = element.findtext(
-            "./txc:OutboundDescription/txc:Description", namespaces=NAMESPACES
+        line_name = element.find_text("./txc:LineName")
+        outbound_description = element.find_text(
+            "./txc:OutboundDescription/txc:Description"
         )
-        inbound_description = element.findtext(
-            "./txc:InboundDescription/txc:Description", namespaces=NAMESPACES
+        inbound_description = element.find_text(
+            "./txc:InboundDescription/txc:Description"
         )
         return cls(
             id=id_,
@@ -52,20 +51,18 @@ class JourneyPattern(BaseModel):
     route_ref: str
 
     @classmethod
-    def from_element(cls, element: _Element):
-        journey_pattern_section_refs = element.findtext(
-            "./txc:JourneyPatternSectionRefs", namespaces=NAMESPACES
+    def from_element(cls, element: Element):
+        journey_pattern_section_refs = element.find_text(
+            "./txc:JourneyPatternSectionRefs"
         )
-        destination_display = element.findtext(
-            "./txc:DestinationDisplay", namespaces=NAMESPACES
-        )
+        destination_display = element.find_text("./txc:DestinationDisplay")
         return cls(
             destination_display=destination_display,
-            direction=element.findtext("./txc:Direction", namespaces=NAMESPACES),
+            direction=element.find_text("./txc:Direction"),
             id=element.attrib.get("id"),
             journey_pattern_section_refs=journey_pattern_section_refs,
-            operator_ref=element.findtext("./txc:OperatorRef", namespaces=NAMESPACES),
-            route_ref=element.findtext("./txc:RouteRef", namespaces=NAMESPACES),
+            operator_ref=element.find_text("./txc:OperatorRef"),
+            route_ref=element.find_text("./txc:RouteRef"),
         )
 
 
@@ -75,15 +72,15 @@ class StandardService(BaseModel):
     origin: str
 
     @classmethod
-    def from_element(cls, element: _Element):
+    def from_element(cls, element: Element):
         journey_patterns = (
             JourneyPattern.from_element(el)
-            for el in element.iterfind("./txc:JourneyPattern", namespaces=NAMESPACES)  # type: ignore
+            for el in element.iter_find("./txc:JourneyPattern")
         )
         return cls(
-            destination=element.findtext("./txc:Destination", namespaces=NAMESPACES),
+            destination=element.find_text("./txc:Destination"),
             journey_patterns=journey_patterns,
-            origin=element.findtext("./txc:Origin", namespaces=NAMESPACES),
+            origin=element.find_text("./txc:Origin"),
         )
 
 
@@ -95,20 +92,19 @@ class Service(BaseModel):
     standard_service: Optional[StandardService]
 
     @classmethod
-    def from_element(cls, element: _Element):
-        service_code = element.findtext("./txc:ServiceCode", namespaces=NAMESPACES)
-        operating_period = element.find("./txc:OperatingPeriod", namespaces=NAMESPACES)
+    def from_element(cls, element: Element):
+        service_code = element.find_text("./txc:ServiceCode")
+        operating_period = element.find("./txc:OperatingPeriod")
         if operating_period is not None:
             operating_period = OperatingPeriod.from_element(operating_period)
 
-        standard_service = element.find("./txc:StandardService", namespaces=NAMESPACES)
+        standard_service = element.find("./txc:StandardService")
         if standard_service is not None:
             standard_service = StandardService.from_element(standard_service)
         lines = (
-            Line.from_element(el)
-            for el in element.iterfind("./txc:Lines/txc:Line", namespaces=NAMESPACES)  # type: ignore
+            Line.from_element(el) for el in element.iter_find("./txc:Lines/txc:Line")
         )
-        public_use = element.findtext("./txc:PublicUse", namespaces=NAMESPACES)
+        public_use = element.find_text("./txc:PublicUse")
         return cls(
             lines=lines,
             operating_period=operating_period,

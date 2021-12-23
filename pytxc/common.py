@@ -1,8 +1,7 @@
 from typing import Optional
-from lxml.etree import _Element
 from pydantic import BaseModel
 
-from .constants import NAMESPACES
+from pytxc.txc import Element
 
 
 class Location(BaseModel):
@@ -11,9 +10,9 @@ class Location(BaseModel):
     latitude: float
 
     @classmethod
-    def from_element(cls, element: _Element):
+    def from_element(cls, element: Element):
         return cls(
             id=element.attrib.get("id"),
-            longitude=element.findtext("./txc:Longitude", namespaces=NAMESPACES),
-            latitude=element.findtext("./txc:Latitude", namespaces=NAMESPACES),
+            longitude=element.find_text("./txc:Longitude"),
+            latitude=element.find_text("./txc:Latitude"),
         )

@@ -1,10 +1,9 @@
 from typing import Optional
 
-from lxml.etree import _Element
 from pydantic import BaseModel
 
-from .constants import NAMESPACES
 from .common import Location
+from .txc import Element
 
 FIND_BY_REF = "./txc:StopPoints/txc:AnnotatedStopPointRef[txc:StopPointRef='{ref}']"
 
@@ -15,15 +14,11 @@ class AnnotatedStopPointRef(BaseModel):
     location: Optional[Location]
 
     @classmethod
-    def from_element(cls, element: _Element):
-        if (
-            location := element.find("./txc:Location", namespaces=NAMESPACES)
-        ) is not None:
+    def from_element(cls, element: Element):
+        if (location := element.find("./txc:Location")) is not None:
             location = Location.from_element(location)
         return cls(
-            stop_point_ref=element.findtext(
-                "./txc:StopPointRef", namespaces=NAMESPACES
-            ),
-            common_name=element.findtext("./txc:CommonName", namespaces=NAMESPACES),
+            stop_point_ref=element.find_text("./txc:StopPointRef"),
+            common_name=element.find_text("./txc:CommonName"),
             location=location,
         )

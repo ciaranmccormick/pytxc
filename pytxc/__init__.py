@@ -1,26 +1,14 @@
-from datetime import datetime
 from pathlib import Path
 from typing import Iterable, List, TextIO
 
 from lxml import etree
-from lxml.etree import _Attrib, _Element
-from pydantic import BaseModel
-
-from .constants import (
-    NAMESPACES,
-    creation_date_time_key,
-    file_name_key,
-    modification_date_time_key,
-    modification_key,
-    revision_number_key,
-    schema_version_key,
-)
 from .journeys import VehicleJourney
 from .operators import Operator
 from .patterns import JourneyPatternSection
 from .routes import Route, RouteSection
 from .services import Service
 from .stops import AnnotatedStopPointRef
+from .txc import Element, TXCAttributes
 
 __all__ = [
     "AnnotatedStopPointRef",
@@ -34,28 +22,8 @@ __all__ = [
 ]
 
 
-class TXCAttributes(BaseModel):
-    schema_version: str
-    creation_date_time: datetime
-    modification_date_time: datetime
-    modification: str
-    revision_number: int
-    file_name: str
-
-    @classmethod
-    def from_attrib(cls, attrib: _Attrib):
-        return cls(
-            schema_version=attrib.get(schema_version_key),
-            creation_date_time=attrib.get(creation_date_time_key),
-            modification_date_time=attrib.get(modification_date_time_key),
-            modification=attrib.get(modification_key),
-            revision_number=attrib.get(revision_number_key),
-            file_name=attrib.get(file_name_key),
-        )
-
-
 class TransXChange:
-    def __init__(self, element: _Element):
+    def __init__(self, element: Element):
         self.element = element
 
     @property
@@ -67,7 +35,7 @@ class TransXChange:
         path = "./txc:StopPoints/txc:AnnotatedStopPointRef"
         return (
             AnnotatedStopPointRef.from_element(el)
-            for el in self.element.iterfind(path, namespaces=NAMESPACES)  # type: ignore
+            for el in self.element.iter_find(path)
         )
 
     @property
@@ -77,10 +45,7 @@ class TransXChange:
     @property
     def iter_routes(self) -> Iterable[Route]:
         path = "./txc:Routes/txc:Route"
-        return (
-            Route.from_element(el)
-            for el in self.element.iterfind(path, namespaces=NAMESPACES)  # type: ignore
-        )
+        return (Route.from_element(el) for el in self.element.iter_find(path))
 
     @property
     def routes(self) -> List[Route]:
@@ -89,10 +54,7 @@ class TransXChange:
     @property
     def iter_route_sections(self) -> Iterable[RouteSection]:
         path = "./txc:RouteSections/txc:RouteSection"
-        return (
-            RouteSection.from_element(el)
-            for el in self.element.iterfind(path, namespaces=NAMESPACES)  # type: ignore
-        )
+        return (RouteSection.from_element(el) for el in self.element.iter_find(path))
 
     @property
     def route_sections(self) -> List[RouteSection]:
@@ -101,10 +63,7 @@ class TransXChange:
     @property
     def iter_operators(self) -> Iterable[Operator]:
         path = "./txc:Operators/txc:Operator"
-        return (
-            Operator.from_element(el)
-            for el in self.element.iterfind(path, namespaces=NAMESPACES)  # type: ignore
-        )
+        return (Operator.from_element(el) for el in self.element.iter_find(path))
 
     @property
     def operators(self) -> List[Operator]:
@@ -113,10 +72,7 @@ class TransXChange:
     @property
     def iter_services(self) -> Iterable[Service]:
         path = "./txc:Services/txc:Service"
-        return (
-            Service.from_element(el)
-            for el in self.element.iterfind(path, namespaces=NAMESPACES)  # type: ignore
-        )
+        return (Service.from_element(el) for el in self.element.iter_find(path))
 
     @property
     def services(self) -> List[Service]:
@@ -127,7 +83,7 @@ class TransXChange:
         path = "./txc:JourneyPatternSections/txc:JourneyPatternSection"
         return (
             JourneyPatternSection.from_element(el)
-            for el in self.element.iterfind(path, namespaces=NAMESPACES)  # type: ignore
+            for el in self.element.iter_find(path)
         )
 
     @property
@@ -137,10 +93,7 @@ class TransXChange:
     @property
     def iter_vehicle_journeys(self) -> Iterable[VehicleJourney]:
         path = "./txc:VehicleJourneys/txc:VehicleJourney"
-        return (
-            VehicleJourney.from_element(el)
-            for el in self.element.iterfind(path, namespaces=NAMESPACES)  # type: ignore
-        )
+        return (VehicleJourney.from_element(el) for el in self.element.iter_find(path))
 
     @property
     def vehicle_journeys(self) -> List[VehicleJourney]:
@@ -149,7 +102,7 @@ class TransXChange:
     @classmethod
     def from_filepath(cls, path: Path):
         with path.open("r") as f:
-            return cls(etree.parse(f).getroot())
+            return cls(Element(etree.parse(f).getroot()))
 
     @classmethod
     def from_filepath_str(cls, path: str):
@@ -157,4 +110,4 @@ class TransXChange:
 
     @classmethod
     def from_file(cls, file: TextIO):
-        return cls(etree.parse(file).getroot())
+        return cls(Element(etree.parse(file).getroot()))

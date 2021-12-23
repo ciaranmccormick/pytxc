@@ -1,7 +1,6 @@
-from lxml.etree import _Element
 from pydantic import BaseModel
 
-from .constants import NAMESPACES
+from .txc import Element
 
 
 class Operator(BaseModel):
@@ -12,18 +11,11 @@ class Operator(BaseModel):
     licence_number: str
 
     @classmethod
-    def from_element(cls, element: _Element):
-        id_ = element.attrib.get("id")
+    def from_element(cls, element: Element):
         return cls(
-            id=id_,
-            national_operator_code=element.findtext(
-                "./txc:NationalOperatorCode", namespaces=NAMESPACES
-            ),
-            operator_code=element.findtext("./txc:OperatorCode", namespaces=NAMESPACES),
-            operator_short_name=element.findtext(
-                "./txc:OperatorShortName", namespaces=NAMESPACES
-            ),
-            licence_number=element.findtext(
-                "./txc:LicenceNumber", namespaces=NAMESPACES
-            ),
+            id=element.attrib.get("id"),
+            national_operator_code=element.find_text("./txc:NationalOperatorCode"),
+            operator_code=element.find_text("./txc:OperatorCode"),
+            operator_short_name=element.find_text("./txc:OperatorShortName"),
+            licence_number=element.find_text("./txc:LicenceNumber"),
         )

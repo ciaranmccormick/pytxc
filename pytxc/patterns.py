@@ -1,9 +1,7 @@
 from typing import Iterable, Optional
 
-from lxml.etree import _Element
 from pydantic import BaseModel
-
-from pytxc.constants import NAMESPACES
+from .txc import Element
 
 
 class TimingLink(BaseModel):
@@ -13,14 +11,12 @@ class TimingLink(BaseModel):
     timing_status: Optional[str]
 
     @classmethod
-    def from_element(cls, element: _Element):
+    def from_element(cls, element: Element):
         return cls(
-            activity=element.findtext("./txc:Activity", namespaces=NAMESPACES),
+            activity=element.find_text("./txc:Activity"),
             sequence_number=element.attrib.get("SequenceNumber"),
-            stop_point_ref=element.findtext(
-                "./txc:StopPointRef", namespaces=NAMESPACES
-            ),
-            timing_status=element.findtext("./txc:TimingStatus", namespaces=NAMESPACES),
+            stop_point_ref=element.find_text("./txc:StopPointRef"),
+            timing_status=element.find_text("./txc:TimingStatus"),
         )
 
 
@@ -32,16 +28,16 @@ class JourneyPatternTimingLink(BaseModel):
     to: TimingLink
 
     @classmethod
-    def from_element(cls, element: _Element):
+    def from_element(cls, element: Element):
         id_ = element.attrib.get("id")
-        run_time = element.findtext("./txc:RunTime", namespaces=NAMESPACES)
-        route_link_ref = element.findtext("./txc:RouteLinkRef", namespaces=NAMESPACES)
+        run_time = element.find_text("./txc:RunTime")
+        route_link_ref = element.find_text("./txc:RouteLinkRef")
 
-        from_ = element.find("./txc:From", namespaces=NAMESPACES)
+        from_ = element.find("./txc:From")
         if from_ is not None:
             from_ = TimingLink.from_element(from_)
 
-        to = element.find("./txc:To", namespaces=NAMESPACES)
+        to = element.find("./txc:To")
         if to is not None:
             to = TimingLink.from_element(to)
 
@@ -59,12 +55,10 @@ class JourneyPatternSection(BaseModel):
     timing_links: Iterable[JourneyPatternTimingLink]
 
     @classmethod
-    def from_element(cls, element: _Element):
+    def from_element(cls, element: Element):
         id_ = element.attrib.get("id")
         timing_links = (
             JourneyPatternTimingLink.from_element(el)
-            for el in element.iterfind(
-                "./txc:JourneyPatternTimingLink", namespaces=NAMESPACES  # type: ignore
-            )
+            for el in element.iter_find("./txc:JourneyPatternTimingLink")
         )
         return cls(id=id_, timing_links=timing_links)
