@@ -1,21 +1,40 @@
-from pydantic import BaseModel
+from typing import Optional
 
-from .txc import Element
+from .elements import Element, Ref
 
 
-class Operator(BaseModel):
-    id: str
-    national_operator_code: str
-    operator_code: str
-    operator_short_name: str
-    licence_number: str
+class Operator(Element):
+    @property
+    def national_operator_code(self) -> Optional[str]:
+        path = "NationalOperatorCode"
+        return self.find_text(path)
 
-    @classmethod
-    def from_element(cls, element: Element):
-        return cls(
-            id=element.attrib.get("id"),
-            national_operator_code=element.find_text("./txc:NationalOperatorCode"),
-            operator_code=element.find_text("./txc:OperatorCode"),
-            operator_short_name=element.find_text("./txc:OperatorShortName"),
-            licence_number=element.find_text("./txc:LicenceNumber"),
-        )
+    @property
+    def operator_code(self) -> Optional[str]:
+        path = "OperatorCode"
+        return self.find_text(path)
+
+    @property
+    def operator_short_name(self) -> Optional[str]:
+        path = "OperatorShortName"
+        return self.find_text(path)
+
+    @property
+    def operator_name_on_licence(self) -> Optional[str]:
+        path = "OperatorNameOnLicence"
+        return self.find_text(path)
+
+    @property
+    def trading_name(self) -> Optional[str]:
+        path = "TradingName"
+        return self.find_text(path)
+
+    @property
+    def licence_number(self) -> Optional[str]:
+        path = "LicenceNumber"
+        return self.find_text(path)
+
+
+class OperatorRef(Ref):
+    element_class = Operator
+    path = "Operators/Operator"

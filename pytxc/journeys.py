@@ -1,50 +1,76 @@
-from datetime import time
+from typing import List, Optional
 
-from pydantic import BaseModel
-
-from .txc import Element
-
-
-class TicketMachine(BaseModel):
-    journey_code: str
-
-    @classmethod
-    def from_element(cls, element: Element):
-        return cls(journey_code=element.find_text("./txc:JourneyCode"))
+from .elements import Element, Ref
+from .links import From, To
+from .routes import RouteLinkRef, RouteRef
 
 
-class Operational(BaseModel):
-    ticket_machine: TicketMachine
-
-    @classmethod
-    def from_element(cls, element: Element):
-        machine = element.find("./txc:TicketMachine")
-        if machine is not None:
-            machine = TicketMachine.from_element(machine)
-        return cls(ticket_machine=machine)
+class OperatingProfile(Element):
+    pass
 
 
-class VehicleJourney(BaseModel):
-    departure_time: time
-    journey_pattern_ref: str
-    line_ref: str
-    operator_ref: str
-    service_ref: str
-    vehicle_journey_code: str
+class JourneyPattern(Element):
+    @property
+    def destination_display(self) -> Optional[str]:
+        path = "DestinationDisplay"
+        return self.find_text(path)
 
-    @classmethod
-    def from_element(cls, element: Element):
-        operator_ref = element.find_text("./txc:OperatorRef")
-        vehicle_journey_code = element.find_text("./txc:VehicleJourneyCode")
-        service_ref = element.find_text("./txc:ServiceRef")
-        line_ref = element.find_text("./txc:LineRef")
-        journey_pattern_ref = element.find_text("./txc:JourneyPatternRef")
-        departure_time = element.find_text("./txc:DepartureTime")
-        return cls(
-            operator_ref=operator_ref,
-            vehicle_journey_code=vehicle_journey_code,
-            service_ref=service_ref,
-            line_ref=line_ref,
-            journey_pattern_ref=journey_pattern_ref,
-            departure_time=departure_time,
-        )
+    @property
+    def direction(self) -> Optional[str]:
+        path = "Direction"
+        return self.find_text(path)
+
+    @property
+    def route_ref(self) -> Optional[RouteRef]:
+        path = "RouteRef"
+        return self._create_ref(path, RouteRef)
+
+
+class JourneyPatternRef(Ref):
+    element_class = JourneyPattern
+    path = "Services/Service/StandardService/JourneyPattern"
+
+
+class JourneyPatternTimingLink(Element):
+    @property
+    def from_(self) -> Optional[From]:
+        path = "From"
+        element = self.find(path)
+        if element is not None:
+            return From(element)
+        return None
+
+    @property
+    def to(self) -> Optional[To]:
+        path = "To"
+        element = self.find(path)
+        if element is not None:
+            return To(element)
+        return None
+
+    @property
+    def route_link_ref(self) -> Optional[RouteLinkRef]:
+        path = "RouteLinkRef"
+        return self._create_ref(path, RouteLinkRef)
+
+    @property
+    def run_time(self) -> Optional[str]:
+        path = "RunTime"
+        return self.find_text(path)
+
+
+class JourneyPatternTimingLinkRef(Ref):
+    element_class = JourneyPatternTimingLink
+    path = "JourneyPatternSections/JourneyPatternSection/JourneyPatternTimingLink"
+
+
+class JourneyPatternSection(Element):
+    @property
+    def timing_links(self) -> List[JourneyPatternTimingLink]:
+        path = "JourneyPatternTimingLink"
+        return [JourneyPatternTimingLink(element) for element in self.find_all(path)]
+
+
+class JourneyPatternSectionRef(Ref):
+    element_class = JourneyPatternSection
+    path = "JourneyPatternSections/JourneyPatternSection"

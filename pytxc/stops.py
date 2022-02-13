@@ -1,25 +1,28 @@
 from typing import Optional
 
-from pydantic import BaseModel
-
-from .common import Location
-from .txc import Element
-
-FIND_BY_REF = "./txc:StopPoints/txc:AnnotatedStopPointRef[txc:StopPointRef='{ref}']"
+from .elements import Element, Ref
 
 
-class AnnotatedStopPointRef(BaseModel):
-    stop_point_ref: str
-    common_name: str
-    location: Optional[Location]
+class StopPointRef(Ref):
+    pass
 
-    @classmethod
-    def from_element(cls, element: Element):
-        location = element.find("./txc:Location")
-        if location is not None:
-            location = Location.from_element(location)
-        return cls(
-            stop_point_ref=element.find_text("./txc:StopPointRef"),
-            common_name=element.find_text("./txc:CommonName"),
-            location=location,
+
+class AnnotatedStopPointRef(Element):
+    def __repr__(self) -> str:
+        return (
+            f"AnnotatedStopPointRef(stop_point_ref={self.stop_point_ref!r}, "
+            f"common_name={self.common_name!r})"
         )
+
+    @property
+    def stop_point_ref(self) -> Optional[StopPointRef]:
+        path = "StopPointRef"
+        element = self.find(path)
+        if element is not None:
+            return StopPointRef(element)
+
+        return None
+
+    @property
+    def common_name(self) -> Optional[str]:
+        return self.find_text("CommonName")

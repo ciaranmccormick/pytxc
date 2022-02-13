@@ -1,114 +1,111 @@
-from datetime import date
-from typing import Iterable, Optional
+from datetime import date, datetime
+from typing import List, Optional
 
-from pydantic import BaseModel
+from .elements import Element, Ref
+from .journeys import JourneyPattern
 
-from .txc import Element
+
+class Line(Element):
+    def __repr__(self) -> str:
+        return f"Line(id={self.id!r}, line_name={self.line_name!r})"
+
+    @property
+    def line_name(self) -> Optional[str]:
+        path = "LineName"
+        return self.find_text(path)
 
 
-class OperatingPeriod(BaseModel):
-    end_date: date
-    start_date: date
+class LineRef(Ref):
+    element_class = Line
+    path = "Services/Service/Lines/Line"
 
-    @classmethod
-    def from_element(cls, element: Element):
-        return cls(
-            end_date=element.find_text("./txc:EndDate"),
-            start_date=element.find_text("./txc:StartDate"),
+
+class OperatingPeriod(Element):
+    def __repr__(self) -> str:
+        return (
+            f"OperatingPeriod(start_date={self.start_date!r}, "
+            f"end_date={self.end_date!r})"
         )
 
+    @property
+    def start_date(self) -> Optional[date]:
+        path = "StartDate"
+        date_str = self.find_text(path)
+        if date_str is not None:
+            return datetime.fromisoformat(date_str).date()
 
-class Line(BaseModel):
-    id: str
-    inbound_description: str
-    line_name: str
-    outbound_description: str
+        return None
 
-    @classmethod
-    def from_element(cls, element: Element):
-        id_ = element.attrib.get("id")
-        line_name = element.find_text("./txc:LineName")
-        outbound_description = element.find_text(
-            "./txc:OutboundDescription/txc:Description"
-        )
-        inbound_description = element.find_text(
-            "./txc:InboundDescription/txc:Description"
-        )
-        return cls(
-            id=id_,
-            inbound_description=inbound_description,
-            line_name=line_name,
-            outbound_description=outbound_description,
-        )
+    @property
+    def end_date(self) -> Optional[date]:
+        path = "EndDate"
+        date_str = self.find_text(path)
+        if date_str is not None:
+            return datetime.fromisoformat(date_str).date()
+
+        return None
 
 
-class JourneyPattern(BaseModel):
-    destination_display: Optional[str]
-    direction: str
-    id: str
-    journey_pattern_section_refs: str
-    operator_ref: str
-    route_ref: str
-
-    @classmethod
-    def from_element(cls, element: Element):
-        journey_pattern_section_refs = element.find_text(
-            "./txc:JourneyPatternSectionRefs"
-        )
-        destination_display = element.find_text("./txc:DestinationDisplay")
-        return cls(
-            destination_display=destination_display,
-            direction=element.find_text("./txc:Direction"),
-            id=element.attrib.get("id"),
-            journey_pattern_section_refs=journey_pattern_section_refs,
-            operator_ref=element.find_text("./txc:OperatorRef"),
-            route_ref=element.find_text("./txc:RouteRef"),
+class StandardService(Element):
+    def __repr__(self) -> str:
+        return (
+            f"StandardService(origin={self.origin!r}, "
+            f"destination={self.destination!r})"
         )
 
+    @property
+    def origin(self) -> Optional[str]:
+        path = "Origin"
+        return self.find_text(path)
 
-class StandardService(BaseModel):
-    destination: str
-    journey_patterns: Iterable[JourneyPattern]
-    origin: str
+    @property
+    def destination(self) -> Optional[str]:
+        path = "Destination"
+        return self.find_text(path)
 
-    @classmethod
-    def from_element(cls, element: Element):
-        journey_patterns = (
-            JourneyPattern.from_element(el)
-            for el in element.iter_find("./txc:JourneyPattern")
-        )
-        return cls(
-            destination=element.find_text("./txc:Destination"),
-            journey_patterns=journey_patterns,
-            origin=element.find_text("./txc:Origin"),
-        )
+    @property
+    def use_all_stop_points(self) -> Optional[bool]:
+        path = "UseAllStopPoints"
+        result = self.find_text(path)
+        if result is not None:
+            return result == "true"
+
+        return None
+
+    @property
+    def journey_patterns(self) -> List[JourneyPattern]:
+        path = "JourneyPattern"
+        return [JourneyPattern(element) for element in self.find_all(path)]
 
 
-class Service(BaseModel):
-    lines: Iterable[Line]
-    operating_period: OperatingPeriod
-    public_use: bool = True
-    service_code: str
-    standard_service: Optional[StandardService]
+class Service(Element):
+    def __repr__(self) -> str:
+        return f"Service(service_code={self.service_code!r})"
 
-    @classmethod
-    def from_element(cls, element: Element):
-        service_code = element.find_text("./txc:ServiceCode")
-        operating_period = element.find("./txc:OperatingPeriod")
-        if operating_period is not None:
-            operating_period = OperatingPeriod.from_element(operating_period)
+    @property
+    def service_code(self) -> Optional[str]:
+        path = "ServiceCode"
+        return self.find_text(path)
 
-        standard_service = element.find("./txc:StandardService")
-        if standard_service is not None:
-            standard_service = StandardService.from_element(standard_service)
-        lines = (
-            Line.from_element(el) for el in element.iter_find("./txc:Lines/txc:Line")
-        )
-        public_use = element.find_text("./txc:PublicUse")
-        return cls(
-            lines=lines,
-            operating_period=operating_period,
-            public_use=public_use,
-            service_code=service_code,
-            standard_service=standard_service,
-        )
+    @property
+    def lines(self) -> List[Line]:
+        path = "Lines/Line"
+        return [Line(element) for element in self.find_all(path)]
+
+    @property
+    def operating_period(self) -> Optional[OperatingPeriod]:
+        path = "OperatingPeriod"
+        element = self.find(path)
+        if element is not None:
+            return OperatingPeriod(element)
+        return None
+
+    @property
+    def standard_services(self) -> List[StandardService]:
+        path = "StandardService"
+        return [StandardService(element) for element in self.find_all(path)]
+
+
+class ServiceRef(Ref):
+    element_class = Service
+    path = "Services/Service"
