@@ -20,7 +20,7 @@ class ParseException(Exception):
 class Dataset:
     def __init__(self, timetables: List[Timetable]):
         self.timetables = OrderedDict(
-            {timetable.file_name: timetable for timetable in timetables}
+            {timetable.header.file_name: timetable for timetable in timetables}
         )
 
     def __len__(self) -> int:

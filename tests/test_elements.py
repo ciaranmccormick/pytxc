@@ -1,14 +1,15 @@
 from lxml import etree
 
-from pytxc import Route, Timetable
+from pytxc import Timetable
 from pytxc.elements import Element
+from pytxc.routes import RouteRef
 
 
 def test_create_ref_none(txc_file):
     timetable = Timetable.from_file(txc_file)
 
     test_path = "Blah"
-    test_element_class = Route
+    test_element_class = RouteRef
 
     result = timetable._create_ref(test_path, test_element_class)
     assert result is None

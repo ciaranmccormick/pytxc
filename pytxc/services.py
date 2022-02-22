@@ -16,8 +16,10 @@ class Line(Element):
 
 
 class LineRef(Ref):
-    element_class = Line
     path = "Services/Service/Lines/Line"
+
+    def resolve(self) -> Line:
+        return super()._resolve(Line)
 
 
 class OperatingPeriod(Element):
@@ -107,5 +109,7 @@ class Service(Element):
 
 
 class ServiceRef(Ref):
-    element_class = Service
     path = "Services/Service"
+
+    def resolve(self) -> Service:
+        return super()._resolve(Service)

@@ -67,8 +67,10 @@ class RouteLink(Element):
 
 
 class RouteLinkRef(Ref):
-    element_class = RouteLink
     path = "RouteSections/RouteSection/RouteLink"
+
+    def resolve(self) -> RouteLink:
+        return super()._resolve(RouteLink)
 
 
 class RouteSection(Element):
@@ -82,8 +84,10 @@ class RouteSection(Element):
 
 
 class RouteSectionRef(Ref):
-    element_class = RouteSection
     path = "RouteSections/RouteSection"
+
+    def resolve(self) -> RouteSection:
+        return super()._resolve(RouteSection)
 
 
 class Route(Element):
@@ -108,5 +112,7 @@ class Route(Element):
 
 
 class RouteRef(Ref):
-    element_class = Route
     path = "Routes/Route"
+
+    def resolve(self) -> Route:
+        return super()._resolve(Route)

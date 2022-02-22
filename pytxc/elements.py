@@ -1,6 +1,9 @@
+from abc import abstractmethod
 from typing import Dict, List, Optional, Type, TypeVar, Union
 
 from lxml.etree import _Element
+
+R = TypeVar("R", bound="Ref")
 
 
 class Element:
@@ -30,7 +33,7 @@ class Element:
     def attributes(self) -> Dict[str, str]:
         return {str(key): str(value) for key, value in self._element.attrib.items()}
 
-    def _create_ref(self, path: str, element_class):
+    def _create_ref(self, path: str, element_class: Type[R]) -> Optional[R]:
         element = self.find(path)
         if element is not None:
             return element_class(element)
@@ -67,22 +70,33 @@ class Element:
         return Element(self._element.getroottree().getroot())
 
 
-T = TypeVar("T", bound=Element)
+E = TypeVar("E", bound=Element)
 
 
-class Ref(Element):
-    element_class: Type[Element]
+class Ref:
     path: str = ""
+
+    def __init__(self, ref: Element):
+        self.ref = ref
+
+    @property
+    def text(self):
+        return self.ref.text
+
+    @property
+    def root(self):
+        return self.ref.get_root()
 
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}(text={self.text})"
 
-    def resolve(self) -> Element:
-        ref = self.text
-        root = self.get_root()
-        element = root.find(self.path + f"[@id='{ref}']")
-        if self.element_class is None:
-            raise NotImplementedError("No 'element_class' set.")
-        if element is not None:
-            return self.element_class(element)
-        raise NotImplementedError("Not implemented")
+    def _resolve(self, element_class: Type[E]) -> E:
+        path = self.path + f"[@id='{self.text}']"
+        element = self.root.find(path)
+        if element is None:
+            raise NotImplementedError()
+        return element_class(element)
+
+    @abstractmethod
+    def resolve(self):
+        pass

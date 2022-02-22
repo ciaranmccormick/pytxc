@@ -36,5 +36,7 @@ class Operator(Element):
 
 
 class OperatorRef(Ref):
-    element_class = Operator
     path = "Operators/Operator"
+
+    def resolve(self) -> Operator:
+        return super()._resolve(Operator)

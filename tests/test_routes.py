@@ -50,7 +50,9 @@ def test_route(txc_file):
     assert route_section is not None
     assert route_section.id == "RS1"
     assert route_section.route_links[0].id == "RL1"
-    assert route_section.route_links[0].get_parent().id == route_section.id
+    parent = route_section.route_links[0].get_parent()
+    assert parent is not None
+    assert parent.id == route_section.id
 
 
 def test_location_none_children():

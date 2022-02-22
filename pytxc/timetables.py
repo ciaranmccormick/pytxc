@@ -1,3 +1,4 @@
+from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 from typing import IO, AnyStr, List, Optional
@@ -13,11 +14,21 @@ from .stops import AnnotatedStopPointRef
 from .vehicles import VehicleJourney
 
 
+@dataclass
+class Header:
+    creation_date_time: Optional[datetime]
+    modification_date_time: Optional[datetime]
+    file_name: str
+    modification: str
+    schema_version: str
+    revision_number: Optional[int]
+
+
 class Timetable(Element):
     def __repr__(self) -> str:
         return (
-            f"Timetable(file_name={self.file_name!r}, "
-            f"revision_number={self.revision_number})"
+            f"Timetable(file_name={self.header.file_name!r}, "
+            f"revision_number={self.header.revision_number})"
         )
 
     def _get_datetime_attr(self, key: str) -> Optional[datetime]:
@@ -27,31 +38,21 @@ class Timetable(Element):
         return None
 
     @property
-    def creation_date_time(self) -> Optional[datetime]:
-        return self._get_datetime_attr("CreationDateTime")
+    def header(self):
+        revision_number_str = self.attributes.get("RevisionNumber")
+        if revision_number_str is not None:
+            revision_number = int(revision_number_str)
+        else:
+            revision_number = None
 
-    @property
-    def file_name(self) -> str:
-        return str(self.attributes.get("FileName", ""))
-
-    @property
-    def modification(self) -> str:
-        return str(self.attributes.get("Modification", ""))
-
-    @property
-    def modification_date_time(self) -> Optional[datetime]:
-        return self._get_datetime_attr("ModificationDateTime")
-
-    @property
-    def revision_number(self) -> Optional[int]:
-        revision_number = self.attributes.get("RevisionNumber")
-        if revision_number is not None:
-            return int(revision_number)
-        return None
-
-    @property
-    def schema_version(self) -> str:
-        return self.attributes.get("SchemaVersion", "")
+        return Header(
+            creation_date_time=self._get_datetime_attr("CreationDateTime"),
+            modification_date_time=self._get_datetime_attr("ModificationDateTime"),
+            file_name=self.attributes.get("FileName", ""),
+            modification=self.attributes.get("Modification", ""),
+            schema_version=self.attributes.get("SchemaVersion", ""),
+            revision_number=revision_number,
+        )
 
     @property
     def operators(self) -> List[Operator]:

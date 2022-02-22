@@ -41,9 +41,9 @@ def test_get_timetable_by_name():
     filename = "5-FECS_5--FECS-COASTAL-2022-02-20-CO1L-BODS_V1_1.xml"
     timetable = dataset.get_timetable_by_name(filename)
     assert timetable is not None
-    assert timetable.file_name == filename
-    assert timetable.revision_number == 66
-    assert timetable.schema_version == "2.4"
+    assert timetable.header.file_name == filename
+    assert timetable.header.revision_number == 66
+    assert timetable.header.schema_version == "2.4"
 
     filename = "blah.xml"
     timetable = dataset.get_timetable_by_name(filename)
@@ -55,4 +55,4 @@ def test_index_dataset():
     with zipfile.ZipFile(zipped_dataset) as zf:
         expected = zf.namelist()[0]
     dataset = Dataset.from_zip_path_str(zipped_dataset.as_posix())
-    assert dataset[0].file_name == expected
+    assert dataset[0].header.file_name == expected

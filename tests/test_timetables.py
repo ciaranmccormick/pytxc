@@ -11,12 +11,12 @@ def test_txc_header(txc_file):
     expected_filename = (
         "35st-None--SCTE-ST-2021-12-12-TXC_SOT_PB_ALL_20211121-BODS_V1_1.xml"
     )
-    assert timetable.schema_version == "2.4"
-    assert timetable.revision_number == 159
-    assert timetable.modification == "revise"
-    assert timetable.creation_date_time == datetime(2020, 11, 22, 11, 0, 0)
-    assert timetable.modification_date_time == datetime(2021, 12, 17, 11, 8, 35)
-    assert timetable.file_name == expected_filename
+    assert timetable.header.schema_version == "2.4"
+    assert timetable.header.revision_number == 159
+    assert timetable.header.modification == "revise"
+    assert timetable.header.creation_date_time == datetime(2020, 11, 22, 11, 0, 0)
+    assert timetable.header.modification_date_time == datetime(2021, 12, 17, 11, 8, 35)
+    assert timetable.header.file_name == expected_filename
     assert timetable.get_parent() is None
 
 
@@ -70,16 +70,16 @@ def test_no_header_attrs():
     element = etree.fromstring(transxchange_str)
     timetable = Timetable(element=element)
 
-    assert timetable.creation_date_time is None
-    assert timetable.file_name == ""
-    assert timetable.modification == ""
-    assert timetable.modification_date_time is None
-    assert timetable.revision_number is None
-    assert timetable.schema_version == ""
+    assert timetable.header.creation_date_time is None
+    assert timetable.header.file_name == ""
+    assert timetable.header.modification == ""
+    assert timetable.header.modification_date_time is None
+    assert timetable.header.revision_number is None
+    assert timetable.header.schema_version == ""
 
 
 def test_timetable_from_file_path():
     data_dir = Path(__file__).parent / "data"
     stockton = data_dir / "stockton_35.xml"
     timetable = Timetable.from_file_path(stockton)
-    assert timetable.schema_version == "2.4"
+    assert timetable.header.schema_version == "2.4"

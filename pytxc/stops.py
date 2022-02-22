@@ -4,7 +4,8 @@ from .elements import Element, Ref
 
 
 class StopPointRef(Ref):
-    pass
+    def resolve(self) -> None:
+        pass
 
 
 class AnnotatedStopPointRef(Element):
