@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from typing import IO, AnyStr, List, Optional
+from typing import IO, AnyStr, List, Optional, Union
 
 from dateutil.parser import parse as parse_datetime
 from lxml import etree
@@ -96,6 +96,6 @@ class Timetable(Element):
             return cls.from_file(f)
 
     @classmethod
-    def from_file(cls, file: IO[AnyStr]) -> "Timetable":
+    def from_file(cls, file: Union[IO[AnyStr], IO[bytes]]) -> "Timetable":
         element = etree.parse(file).getroot()
         return cls(element)
