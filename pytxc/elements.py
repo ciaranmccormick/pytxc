@@ -16,7 +16,13 @@ class Element:
         self.nsmap = {None: "http://www.transxchange.org.uk/"}
 
     def __repr__(self):
-        return self._element.__repr__()
+        class_name = self.__class__.__name__
+        attrs = []
+        if self.text:
+            attrs.append("text={self.text!r}")
+        attrs += [f"{key}={value!r}" for key, value in self.attributes.items()]
+        attrs_str = ", ".join(attrs)
+        return f"{class_name}({attrs_str})"
 
     @property
     def id(self) -> str:

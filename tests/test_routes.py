@@ -1,7 +1,7 @@
 from lxml import etree
 
 from pytxc import Timetable
-from pytxc.routes import Location, RouteLink
+from pytxc.routes import Location, RouteLink, Track
 
 
 def test_route_links(txc_file):
@@ -78,3 +78,45 @@ def test_route_link_none():
     assert route_link.distance is None
     assert route_link.track is None
     assert route_link
+
+
+def test_track_to_geojson():
+    track_str = """
+    <Track xmlns="http://www.transxchange.org.uk/">
+        <Mapping>
+            <Location id="L1">
+                <Longitude>-2.225187</Longitude>
+                <Latitude>52.193115</Latitude>
+            </Location>
+            <Location id="L2">
+                <Longitude>-2.225790</Longitude>
+                <Latitude>52.192899</Latitude>
+            </Location>
+            <Location id="L3">
+                <Longitude>-2.225790</Longitude>
+                <Latitude>52.192899</Latitude>
+            </Location>
+        </Mapping>
+    </Track>
+    """
+    element = etree.fromstring(track_str)
+    track = Track(element=element)
+    expected_geojson = {
+        "type": "LineString",
+        "coordinates": (
+            (-2.225187, 52.193115),
+            (-2.225790, 52.192899),
+            (-2.225790, 52.192899),
+        ),
+    }
+    assert track.to_geojson() == expected_geojson
+
+
+def test_location_missing_values():
+    location_str = """
+    <Location id="L1" xmlns="http://www.transxchange.org.uk/">
+    </Location>
+    """
+    element = etree.fromstring(location_str)
+    location = Location(element=element)
+    assert [] == location.to_list()

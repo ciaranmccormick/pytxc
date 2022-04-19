@@ -1,7 +1,12 @@
-from typing import List, Optional
+from typing import Dict, List, Optional, Tuple, Union
+
+from shapely.geometry import LineString, mapping
 
 from .elements import Element, Ref
 from .links import From, To
+
+Coordinates = Tuple[Tuple[float]]
+GeoValue = Union[str, Coordinates]
 
 
 class Location(Element):
@@ -21,12 +26,24 @@ class Location(Element):
             return float(value)
         return None
 
+    def to_list(self) -> List[float]:
+        if self.longitude is not None and self.latitude is not None:
+            return [self.longitude, self.latitude]
+        return []
+
 
 class Track(Element):
     @property
     def mapping(self):
         path = "Mapping/Location"
         return [Location(element) for element in self.find_all(path)]
+
+    def to_list(self) -> List[List[float]]:
+        return [location.to_list() for location in self.mapping]
+
+    def to_geojson(self) -> Dict[str, GeoValue]:
+        line = LineString(self.to_list())
+        return mapping(line)
 
 
 class RouteLink(Element):

@@ -4,7 +4,7 @@ SHELL:=/usr/bin/env bash
 .PHONY: lint
 lint:
 	poetry run mypy pytxc tests/*.py
-	poetry run flake8 .
+	poetry run flake8 pytxc tests
 
 .PHONY: unit
 unit:
