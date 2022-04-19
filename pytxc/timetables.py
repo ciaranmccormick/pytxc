@@ -3,6 +3,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import IO, AnyStr, List, Optional
 
+from dateutil.parser import parse as parse_datetime
 from lxml import etree
 
 from .elements import Element
@@ -34,7 +35,7 @@ class Timetable(Element):
     def _get_datetime_attr(self, key: str) -> Optional[datetime]:
         date_time = self.attributes.get(key)
         if date_time is not None:
-            return datetime.fromisoformat(date_time)
+            return parse_datetime(date_time)
         return None
 
     @property
