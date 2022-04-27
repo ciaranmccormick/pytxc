@@ -11,6 +11,7 @@ Shapely = "^1.8.1"
 lxml = "^4.7.1"
 pyproj = "^3.3.0"
 shapely-geojson = "^0.0.1"
+ordered-enum = "^0.0.6"
 
 [tool.poetry.dev-dependencies]
 Sphinx = "^4.4.0"
