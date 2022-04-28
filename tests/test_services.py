@@ -3,13 +3,7 @@ from datetime import datetime
 from lxml import etree
 
 from pytxc import Timetable
-from pytxc.services import (
-    DayOfWeek,
-    OperatingPeriod,
-    OperatingProfile,
-    Service,
-    StandardService
-)
+from pytxc.services import OperatingPeriod, Service, StandardService
 
 
 def test_services(txc_file):
@@ -82,42 +76,3 @@ def test_standard_service_none_use_all_stop_points():
     element = etree.fromstring(standard_service_str)
     standard_service = StandardService(element=element)
     assert standard_service.use_all_stop_points is None
-
-
-def test_operating_profile_holidays_only():
-    operating_profile_str = """
-    <OperatingProfile xmlns="http://www.transxchange.org.uk/">
-        <RegularDayType>
-            <HolidaysOnly/>
-        </RegularDayType>
-    </OperatingProfile>
-    """
-    element = etree.fromstring(operating_profile_str)
-    operating_profile = OperatingProfile(element)
-    assert operating_profile.holidays_only is True
-
-
-def test_operating_profile_week_days():
-    operating_profile_str = """
-    <OperatingProfile xmlns="http://www.transxchange.org.uk/">
-        <RegularDayType>
-            <DaysOfWeek>
-                <Monday/>
-                <Tuesday/>
-                <Wednesday/>
-                <Thursday/>
-                <Friday/>
-            </DaysOfWeek>
-        </RegularDayType>
-    </OperatingProfile>
-    """
-    element = etree.fromstring(operating_profile_str)
-    operating_profile = OperatingProfile(element)
-    days_of_week = operating_profile.days_of_week
-    assert len(days_of_week) == 5
-    assert DayOfWeek.monday in days_of_week
-    assert DayOfWeek.tuesday in days_of_week
-    assert DayOfWeek.wednesday in days_of_week
-    assert DayOfWeek.thursday in days_of_week
-    assert DayOfWeek.friday in days_of_week
-    assert operating_profile.holidays_only is False

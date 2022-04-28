@@ -98,8 +98,3 @@ class Timetable(Element):
     def from_file(cls, file: IO[AnyStr]) -> "Timetable":
         element = etree.parse(file).getroot()
         return cls(element)
-
-    @classmethod
-    def from_string(cls, xml: str) -> "Timetable":
-        element = etree.fromstring(xml)
-        return cls(element)

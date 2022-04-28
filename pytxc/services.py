@@ -1,5 +1,4 @@
 from datetime import date, datetime
-from enum import Enum
 from typing import List, Optional
 
 from .elements import Element, Ref
@@ -47,43 +46,6 @@ class OperatingPeriod(Element):
             return datetime.fromisoformat(date_str).date()
 
         return None
-
-
-class DayOfWeek(Enum):
-    monday = "Monday"
-    tuesday = "Tuesday"
-    wednesday = "Wednesday"
-    thursday = "Thursday"
-    friday = "Friday"
-    saturday = "Saturday"
-    sunday = "Sunday"
-
-
-class OperatingProfile(Element):
-    def __repr__(self) -> str:
-        if self.holidays_only:
-            return "OperatingProfile(holidays only)"
-        days_of_week = self.days_of_week
-        if len(days_of_week) == 0:
-            return "OperatingProfile(none)"
-        return f"OperatingProfile({' '.join([d.value for d in days_of_week])})"
-
-    @property
-    def holidays_only(self) -> bool:
-        path = "RegularDayType/HolidaysOnly"
-        elem = self.find(path)
-        return elem is not None
-
-    @property
-    def days_of_week(self) -> List[DayOfWeek]:
-        path = "RegularDayType/DaysOfWeek"
-        days_of_week_elem = self.find(path)
-        applicable_days = []
-        if days_of_week_elem is not None:
-            for day in DayOfWeek:
-                if days_of_week_elem.find(day.value) is not None:
-                    applicable_days.append(day)
-        return applicable_days
 
 
 class StandardService(Element):
@@ -138,14 +100,6 @@ class Service(Element):
         element = self.find(path)
         if element is not None:
             return OperatingPeriod(element)
-        return None
-
-    @property
-    def operating_profile(self) -> Optional[OperatingProfile]:
-        path = "OperatingProfile"
-        element = self.find(path)
-        if element is not None:
-            return OperatingProfile(element)
         return None
 
     @property
