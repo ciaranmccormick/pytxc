@@ -17,13 +17,24 @@ def test_dataset_from_zip_path_str():
     assert len(dataset) == 15
 
 
-def test_dataset_from_url(dataset_response):
+def test_dataset_from_url_zip(dataset_response):
     id_ = 6972
     url = DATASET_DOWNLOAD_URL.format(id=id_)
     with requests_mock.Mocker() as m:
-        m.get(url, content=dataset_response)
+        m.get(
+            url, content=dataset_response, headers={"Content-Type": "application/zip"}
+        )
         dataset = Dataset.from_bods_id(id_)
     assert len(dataset) == 15
+
+
+def test_dataset_from_url_xml(txc_file_content):
+    id_ = 6972
+    url = DATASET_DOWNLOAD_URL.format(id=id_)
+    with requests_mock.Mocker() as m:
+        m.get(url, content=txc_file_content, headers={"Content-Type": "text/xml"})
+        dataset = Dataset.from_bods_id(id_)
+    assert len(dataset) == 1
 
 
 def test_dataset_from_url_exception():
