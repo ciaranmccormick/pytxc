@@ -565,6 +565,17 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "ordered-enum"
+version = "0.0.6"
+description = "A small library for adding total orderings to enums"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+dev = ["flake8", "black", "isort", "pytest", "coverage", "twine"]
+
+[[package]]
 name = "packaging"
 version = "21.3"
 description = "Core utilities for Python packages"
@@ -1150,7 +1161,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "b3b207e1805372bbb9505b08542ed795956e4ed812c97b93964d4eae0657bf7b"
+content-hash = "7ae41b389e90048e000907feacd7a05cfe22bef35565db8bd5a29e993b8fe884"
 
 [metadata.files]
 alabaster = [
@@ -1489,6 +1500,9 @@ myst-parser = [
 nodeenv = [
     {file = "nodeenv-1.6.0-py2.py3-none-any.whl", hash = "sha256:621e6b7076565ddcacd2db0294c0381e01fd28945ab36bcf00f41c5daf63bef7"},
     {file = "nodeenv-1.6.0.tar.gz", hash = "sha256:3ef13ff90291ba2a4a7a4ff9a979b63ffdd00a464dbe04acf0ea6471517a4c2b"},
+]
+ordered-enum = [
+    {file = "ordered_enum-0.0.6.tar.gz", hash = "sha256:6544c0f528eeeec0bbe7999bf512c40fe62de24bedba9cf881f3bc24f57ad773"},
 ]
 packaging = [
     {file = "packaging-21.3-py3-none-any.whl", hash = "sha256:ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522"},
