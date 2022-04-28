@@ -17,3 +17,10 @@ def txc_file():
     stockton_35 = DATA_DIR / "stockton_35.xml"
     with stockton_35.open("r") as f:
         yield f
+
+
+@pytest.fixture()
+def txc_file_content():
+    stockton_35 = DATA_DIR / "stockton_35.xml"
+    with stockton_35.open("rb") as f:
+        yield f.read()
