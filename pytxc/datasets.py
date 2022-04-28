@@ -49,11 +49,12 @@ class Dataset:
         except RequestException:
             raise ParseException(f"Unable to retrieve data set from {url}")
         else:
-            if response.headers['Content-Type'] == "application/zip":
+            if response.headers.get('Content-Type') == "application/zip":
                 bytes_ = io.BytesIO(response.content)
                 return cls.from_zip_file(bytes_)
             # Single XML file
-            return cls.from_string(response.content)
+            bytes_ = io.BytesIO(response.content)
+            return cls([Timetable.from_file(bytes_)])
 
     @classmethod
     def from_bods_id(cls, id: int) -> "Dataset":
@@ -68,7 +69,3 @@ class Dataset:
     @classmethod
     def from_zip_path_str(cls, path: str) -> "Dataset":
         return cls.from_zip_path(Path(path))
-
-    @classmethod
-    def from_string(cls, xml: str) -> "Dataset":
-        return cls([Timetable.from_string(xml)])

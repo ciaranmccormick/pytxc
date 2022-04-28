@@ -1,5 +1,5 @@
 from datetime import date, datetime
-from ordered_enum import OrderedEnum
+from enum import Enum
 from typing import List, Optional
 
 from .elements import Element, Ref
@@ -49,7 +49,7 @@ class OperatingPeriod(Element):
         return None
 
 
-class DayOfWeek(OrderedEnum):
+class DayOfWeek(Enum):
     monday = "Monday"
     tuesday = "Tuesday"
     wednesday = "Wednesday"
@@ -64,7 +64,7 @@ class OperatingProfile(Element):
         if self.holidays_only:
             return "OperatingProfile(holidays only)"
         days_of_week = self.days_of_week
-        if days_of_week is None:
+        if len(days_of_week) == 0:
             return "OperatingProfile(none)"
         return f"OperatingProfile({' '.join([d.value for d in days_of_week])})"
 
