@@ -2,6 +2,7 @@
 
 [![test](https://github.com/ciaranmccormick/pytxc/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/ciaranmccormick/pytxc/actions/workflows/test.yml)
 [![Python Version](https://img.shields.io/pypi/pyversions/pytxc.svg)](https://pypi.org/project/pytxc/)
+[![codecov](https://codecov.io/gh/ciaranmccormick/pytxc/branch/main/graph/badge.svg?token=RIZHOMHC19)](https://codecov.io/gh/ciaranmccormick/pytxc)
 
 ## Quick start
 
