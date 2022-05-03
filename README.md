@@ -1,5 +1,8 @@
 # pytxc
 
+[![test](https://github.com/ciaranmccormick/pytxc/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/ciaranmccormick/pytxc/actions/workflows/test.yml)
+[![Python Version](https://img.shields.io/pypi/pyversions/pytxc.svg)](https://pypi.org/project/pytxc/)
+
 ## Quick start
 
 ### Installation

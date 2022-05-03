@@ -143,6 +143,7 @@ Sessionx.vim
 [._]sw[a-p]
 __pycache__/
 __pypackages__/
+_scripts/
 build/
 celerybeat-schedule
 celerybeat.pid
