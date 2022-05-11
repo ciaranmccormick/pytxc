@@ -25,3 +25,9 @@ def test_text_none():
     element = etree.fromstring(element_str)
     element.text = None
     assert Element(element).text is None
+
+
+def test_line_number(txc_file):
+    timetable = Timetable.from_file(txc_file)
+    first_stop_point = timetable.stop_points[0]
+    assert first_stop_point.line_number == 5
