@@ -110,6 +110,10 @@ def test_vehicle_journeys(txc_file):
     block = operational.block
     assert block is None
 
+    operating_profile = journey.operating_profile
+    assert operating_profile is not None
+    assert operating_profile.holidays_only
+
 
 def test_journey_pattern_timing_link_none():
     jp_timing_link_str = """
