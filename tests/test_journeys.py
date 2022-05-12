@@ -168,3 +168,19 @@ def test_vehicle_journey_none_children():
 
     assert vehicle_journey.operational is None
     assert vehicle_journey.departure_time is None
+
+
+def test_operating_profile_none():
+    vehicle_journey_str = """
+    <VehicleJourney xmlns="http://www.transxchange.org.uk/">
+        <OperatingProphet>
+            <RegularDayType>
+              <HolidaysOnly/>
+            </RegularDayType>
+        </OperatingProphet>
+    </VehicleJourney>
+    """
+    element = etree.fromstring(vehicle_journey_str)
+    vehicle_journey = VehicleJourney(element)
+    operating_profile = vehicle_journey.operating_profile
+    assert operating_profile is None
