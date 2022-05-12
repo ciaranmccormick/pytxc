@@ -1,21 +1,24 @@
 [tool.poetry]
 name = "pytxc"
-version = "0.1.0"
+version = "0.1.5"
 description = "Python parser from TransXChange."
 authors = ["Ciaran McCormick <ciaran@ciaranmccormick.com>"]
 license = "MIT"
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
 Shapely = "^1.8.1"
 lxml = "^4.7.1"
 pyproj = "^3.3.0"
+python-dateutil = "^2.8.2"
+requests = "^2.27.1"
 shapely-geojson = "^0.0.1"
 
 [tool.poetry.dev-dependencies]
 Sphinx = "^4.4.0"
 bandit = "^1.7.2"
-black = "^21.12b0"
+black = "~22.3.0"
 flake8 = "^4.0.1"
 ipdb = "^0.13.9"
 ipython = "~8.0.1"
@@ -30,6 +33,7 @@ requests-mock = "^1.9.3"
 safety = "^1.10.3"
 sphinx-rtd-theme = "^1.0.0"
 types-requests = "^2.27.9"
+types-python-dateutil = "^2.8.11"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
