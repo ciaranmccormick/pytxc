@@ -110,6 +110,10 @@ def test_vehicle_journeys(txc_file):
     block = operational.block
     assert block is None
 
+    operating_profile = journey.operating_profile
+    assert operating_profile is not None
+    assert operating_profile.holidays_only
+
 
 def test_journey_pattern_timing_link_none():
     jp_timing_link_str = """
@@ -164,3 +168,19 @@ def test_vehicle_journey_none_children():
 
     assert vehicle_journey.operational is None
     assert vehicle_journey.departure_time is None
+
+
+def test_operating_profile_none():
+    vehicle_journey_str = """
+    <VehicleJourney xmlns="http://www.transxchange.org.uk/">
+        <OperatingProphet>
+            <RegularDayType>
+              <HolidaysOnly/>
+            </RegularDayType>
+        </OperatingProphet>
+    </VehicleJourney>
+    """
+    element = etree.fromstring(vehicle_journey_str)
+    vehicle_journey = VehicleJourney(element)
+    operating_profile = vehicle_journey.operating_profile
+    assert operating_profile is None

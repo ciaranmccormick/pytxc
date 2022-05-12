@@ -4,7 +4,7 @@ from typing import List, Optional
 from .elements import Element
 from .journeys import JourneyPatternRef, JourneyPatternTimingLinkRef
 from .operators import OperatorRef
-from .services import LineRef, ServiceRef
+from .services import LineRef, OperatingProfile, ServiceRef
 
 
 class Block(Element):
@@ -110,3 +110,11 @@ class VehicleJourney(Element):
     def timing_links(self) -> List[VehicleJourneyTimingLink]:
         path = "VehicleJourneyTimingLink"
         return [VehicleJourneyTimingLink(element) for element in self.find_all(path)]
+
+    @property
+    def operating_profile(self) -> Optional[OperatingProfile]:
+        path = "OperatingProfile"
+        element = self.find(path)
+        if element is not None:
+            return OperatingProfile(element)
+        return None

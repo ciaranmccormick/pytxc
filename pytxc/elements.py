@@ -19,7 +19,7 @@ class Element:
         class_name = self.__class__.__name__
         attrs = []
         if self.text:
-            attrs.append("text={self.text!r}")
+            attrs.append(f"text={self.text!r}")
         attrs += [f"{key}={value!r}" for key, value in self.attributes.items()]
         attrs_str = ", ".join(attrs)
         return f"{class_name}({attrs_str})"
@@ -74,6 +74,10 @@ class Element:
 
     def get_root(self) -> "Element":
         return Element(self._element.getroottree().getroot())
+
+    @property
+    def line_number(self) -> Optional[int]:
+        return self._element.sourceline     # type: ignore
 
 
 E = TypeVar("E", bound=Element)

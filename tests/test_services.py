@@ -121,3 +121,10 @@ def test_operating_profile_week_days():
     assert DayOfWeek.thursday in days_of_week
     assert DayOfWeek.friday in days_of_week
     assert operating_profile.holidays_only is False
+
+
+def test_day_of_week_from_int():
+    day = DayOfWeek.from_weekday_int(0)
+    assert day == DayOfWeek.monday
+    day = DayOfWeek.from_weekday_int(6)
+    assert day == DayOfWeek.sunday

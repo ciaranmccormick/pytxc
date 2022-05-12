@@ -58,6 +58,22 @@ class DayOfWeek(Enum):
     saturday = "Saturday"
     sunday = "Sunday"
 
+    @classmethod
+    def from_weekday_int(cls, weekday: int) -> "DayOfWeek":
+        """Create DayOfWeek object from zero-based integer, compatible with
+        library method date.weekday()
+        """
+        map = {
+            0: cls.monday,
+            1: cls.tuesday,
+            2: cls.wednesday,
+            3: cls.thursday,
+            4: cls.friday,
+            5: cls.saturday,
+            6: cls.sunday
+        }
+        return map[weekday]
+
 
 class OperatingProfile(Element):
     def __repr__(self) -> str:
