@@ -172,6 +172,7 @@ parts/
 pip-delete-this-directory.txt
 pip-log.txt
 profile_default/
+pyrightconfig.json
 sdist/
 share/python-wheels/
 tags
