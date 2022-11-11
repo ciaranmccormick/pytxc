@@ -15,7 +15,7 @@ test TEST:
 check:
 	poetry check
 	poetry run pip check
-	poetry run safety check --full-report
+	poetry run pip-audit
 
 # run linting, checking and testing
 all: lint check test-all
