@@ -1,93 +1,4 @@
 !*.svg  # comment out if you don't need vector files
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   For a library or package, you might want to ignore these files since the code is
-#   For a library or package, you might want to ignore these files since the code is
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#   install all needed dependencies.
-#   intended to run in multiple environments; otherwise, check them in:
-#   intended to run in multiple environments; otherwise, check them in:
-#  Usually these files are written by a python script from a template
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-# .python-version
-# .python-version
-# <django-project-name>/staticfiles/
-# Auto-generated tag files
-# Byte-compiled / optimized / DLL files
-# Byte-compiled / optimized / DLL files
-# C extensions
-# C extensions
-# Celery stuff
-# Celery stuff
-# Created by https://www.toptal.com/developers/gitignore/api/python,django,vim
-# Cython debug symbols
-# Cython debug symbols
-# Distribution / packaging
-# Distribution / packaging
-# Django stuff:
-# Django stuff:
-# Edit at https://www.toptal.com/developers/gitignore?templates=python,django,vim
-# End of https://www.toptal.com/developers/gitignore/api/python,django,vim
-# Environments
-# Environments
-# Flask stuff:
-# Flask stuff:
-# IPython
-# IPython
-# If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
-# Installer logs
-# Installer logs
-# Jupyter Notebook
-# Jupyter Notebook
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-# Persistent undo
-# PyBuilder
-# PyBuilder
-# PyInstaller
-# PyInstaller
-# Pyre type checker
-# Pyre type checker
-# Rope project settings
-# Rope project settings
-# SageMath parsed files
-# SageMath parsed files
-# Scrapy stuff:
-# Scrapy stuff:
-# Session
-# Sphinx documentation
-# Sphinx documentation
-# Spyder project settings
-# Spyder project settings
-# Swap
-# Temporary
-# Translations
-# Translations
-# Unit test / coverage reports
-# Unit test / coverage reports
-# in your Git repository. Update and uncomment the following line accordingly.
-# mkdocs documentation
-# mkdocs documentation
-# mypy
-# mypy
-# pipenv
-# pipenv
-# pyenv
-# pyenv
-# pytype static type analyzer
-# pytype static type analyzer
-### Custom ###
-### Django ###
-### Django.Python Stack ###
-### Python ###
-### Vim ###
-#Pipfile.lock
 *$py.class
 *.cover
 *.egg
@@ -143,6 +54,7 @@ Sessionx.vim
 [._]sw[a-p]
 __pycache__/
 __pypackages__/
+_main.py
 _scripts/
 build/
 celerybeat-schedule

@@ -14,7 +14,7 @@ unit:
 package:
 	poetry check
 	poetry run pip check
-	poetry run safety check --full-report
+	poetry run pip-audit
 
 .PHONY: test
 test: lint package unit
