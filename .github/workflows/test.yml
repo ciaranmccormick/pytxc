@@ -10,15 +10,21 @@ jobs:
         python-version: ["3.8", "3.9", "3.10", "3.11"]
 
     steps:
-      - uses: actions/checkout@v3.0.2
+      - name: Setup Checkout
+        uses: actions/checkout@v3
 
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4.1.0
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
 
-      - uses: Gr1N/setup-poetry@v7
-      - uses: extractions/setup-just@v1
+      - name: Setup Poetry
+        uses: Gr1N/setup-poetry@v7
+        with:
+          poetry-version: 1.2.2
+
+      - name: Setup just
+        uses: extractions/setup-just@v1
 
       - name: Set up cache
         uses: actions/cache@v2
