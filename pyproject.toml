@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pytxc"
-version = "0.1.6"
+version = "0.2.0"
 description = "Python parser from TransXChange."
 authors = ["Ciaran McCormick <ciaran@ciaranmccormick.com>"]
 license = "MIT"
@@ -16,71 +16,30 @@ requests = "^2.27.1"
 shapely-geojson = "^0.0.1"
 
 [tool.poetry.group.dev.dependencies]
-Sphinx = "^4.4.0"
-bandit = "^1.7.2"
-black = "~22.3.0"
+black = "^22.3.0"
 flake8 = "^4.0.1"
 ipdb = "^0.13.9"
-ipython = "~8.0.1"
+ipython = "^8.0.1"
 isort = "^5.10.1"
-lxml-stubs = "^0.3.0"
 mypy = "^0.920"
-myst-parser = "^0.17.0"
 pip-audit = "^2.4.5"
 pre-commit = "^2.16.0"
+
+[tool.poetry.group.stubs.dependencies]
+types-python-dateutil = "^2.8.11"
+types-requests = "^2.27.9"
+lxml-stubs = "^0.3.0"
+
+[tool.poetry.group.test.dependencies]
 pytest = "^7.0.0"
 pytest-cov = "^3.0.0"
 requests-mock = "^1.9.3"
+
+[tool.poetry.group.docs.dependencies]
+Sphinx = "^4.4.0"
 sphinx-rtd-theme = "^1.0.0"
-types-python-dateutil = "^2.8.11"
-types-requests = "^2.27.9"
+myst-parser = "^0.17.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-
-[tool.bandit]
-tests = ["B201", "B301"]
-skips = ["B101", "B601"]
-
-[tool.bandit.any_other_function_with_shell_equals_true]
-no_shell = [
-  "os.execl",
-  "os.execle",
-  "os.execlp",
-  "os.execlpe",
-  "os.execv",
-  "os.execve",
-  "os.execvp",
-  "os.execvpe",
-  "os.spawnl",
-  "os.spawnle",
-  "os.spawnlp",
-  "os.spawnlpe",
-  "os.spawnv",
-  "os.spawnve",
-  "os.spawnvp",
-  "os.spawnvpe",
-  "os.startfile"
-]
-shell = [
-  "os.system",
-  "os.popen",
-  "os.popen2",
-  "os.popen3",
-  "os.popen4",
-  "popen2.popen2",
-  "popen2.popen3",
-  "popen2.popen4",
-  "popen2.Popen3",
-  "popen2.Popen4",
-  "commands.getoutput",
-  "commands.getstatusoutput"
-]
-subprocess = [
-  "subprocess.Popen",
-  "subprocess.call",
-  "subprocess.check_call",
-  "subprocess.check_output"
-]
