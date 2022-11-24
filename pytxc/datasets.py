@@ -1,92 +1,69 @@
-import io
+"""datasets.py."""
 import zipfile
 from collections import OrderedDict
 from pathlib import Path
-from typing import IO, AnyStr, List, Optional, Union
+from typing import IO, AnyStr, List, Optional, Union, cast
 
-import requests
-from requests import RequestException
-
-from .timetables import Timetable
-
-BODS_URL = "https://data.bus-data.dft.gov.uk"
-DATASET_DOWNLOAD_URL = BODS_URL + "/timetable/dataset/{id}/download"
-
-
-class ParseException(Exception):
-    pass
+from pytxc.txc import TransXChange
 
 
 class Dataset:
-    def __init__(self, timetables: List[Timetable]):
+    def __init__(self, timetables: List[TransXChange]):
         self.timetables = OrderedDict(
-            {timetable.header.file_name: timetable for timetable in timetables}
+            {
+                timetable.attributes.file_name: timetable
+                for timetable in timetables
+                if timetable.attributes is not None
+            }
         )
 
     def __len__(self) -> int:
+        """Return the number of TransXChange files in a Dataset."""
         return len(self.timetables.keys())
 
-    def __getitem__(self, item) -> Timetable:
+    def __getitem__(self, item) -> TransXChange:
+        """Return a TransXChange timetable by index."""
         return list(self.timetables.values())[item]
 
-    def get_timetable_by_name(self, name: str) -> Optional[Timetable]:
+    def get_timetable_by_name(self, name: str) -> Optional[TransXChange]:
+        """Return a TransXChange timetable by filename."""
         return self.timetables.get(name, None)
 
     @classmethod
     def from_zip_file(cls, file: IO[bytes]) -> "Dataset":
+        """Return a Dataset from a zip file."""
         timetables = []
-        with zipfile.ZipFile(file) as zf:
-            filenames = [name for name in zf.namelist() if name.endswith("xml")]
+        with zipfile.ZipFile(file) as zip_file:
+            filenames = [name for name in zip_file.namelist() if name.endswith("xml")]
             for filename in filenames:
-                with zf.open(filename) as f:
-                    timetables.append(Timetable.from_file(f))
+                with zip_file.open(filename) as txc_file:
+                    timetables.append(TransXChange.from_file(txc_file))
         return cls(timetables)
 
     @classmethod
-    def from_bods_url(cls, url: str) -> "Dataset":
-        try:
-            response = requests.get(url, timeout=15)
-        except RequestException:
-            raise ParseException(f"Unable to retrieve data set from {url}")
-        else:
-            if response.headers.get("Content-Type") == "application/zip":
-                bytes_ = io.BytesIO(response.content)
-                return cls.from_zip_file(bytes_)
-            # Single XML file
-            bytes_ = io.BytesIO(response.content)
-            return cls([Timetable.from_file(bytes_)])
-
-    @classmethod
-    def from_bods_id(cls, id: int) -> "Dataset":
-        url = DATASET_DOWNLOAD_URL.format(id=id)
-        return cls.from_bods_url(url)
-
-    @classmethod
     def from_zip_path(cls, path: Path) -> "Dataset":
-        with path.open("rb") as f:
-            return cls.from_zip_file(f)
+        """Return a Dataset from a path to a zipfile."""
+        with path.open("rb") as zip_file:
+            return cls.from_zip_file(zip_file)
 
     @classmethod
     def from_zip_path_str(cls, path: str) -> "Dataset":
+        """Return a Dataset from string path to a zipfile"""
         return cls.from_zip_path(Path(path))
 
     @classmethod
-    def from_path(cls, path: Path) -> "Dataset":
-        if zipfile.is_zipfile(path):
-            return cls.from_zip_path(path)
-        else:
-            return cls.from_xml_file_path(path)
-
-    @classmethod
-    def from_xml_file(cls, file: Union[IO[AnyStr], IO[bytes]]) -> "Dataset":
-        timetable = Timetable.from_file(file)
+    def from_xml_file(cls, xml_file: Union[IO[AnyStr], IO[bytes]]) -> "Dataset":
+        """Return a Dataset from an xml file."""
+        timetable = cast(TransXChange, TransXChange.from_file(xml_file))
         return cls([timetable])
 
     @classmethod
     def from_xml_file_path(cls, path: Path) -> "Dataset":
-        with path.open("r") as f:
-            return cls.from_xml_file(f)
+        """Return a Dataset from an xml file path."""
+        with path.open("r") as xml_file:
+            return cls.from_xml_file(xml_file)
 
     @classmethod
     def from_xml_file_path_str(cls, path: str) -> "Dataset":
+        """Return a Dataset from an xml file path string."""
         return cls.from_xml_file_path(Path(path))

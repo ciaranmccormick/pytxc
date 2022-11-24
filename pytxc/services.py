@@ -1,54 +1,56 @@
-from datetime import date, datetime
-from enum import Enum
+"""services.py."""
+from datetime import date
 from typing import List, Optional
 
-from .elements import Element, Ref
-from .journeys import JourneyPattern
+from pytxc.elements import BaseElement
+from pytxc.journeys import JourneyPattern
 
 
-class Line(Element):
-    def __repr__(self) -> str:
-        return f"Line(id={self.id!r}, line_name={self.line_name!r})"
+class OutboundDescription(BaseElement):
+    """A class representing an OutboundDescription node."""
 
-    @property
-    def line_name(self) -> Optional[str]:
-        path = "LineName"
-        return self.find_text(path)
+    origin: str
+    destination: str
+    description: str
 
 
-class LineRef(Ref):
-    path = "Services/Service/Lines/Line"
+class OperatingPeriod(BaseElement):
+    """A class representing an OperatingPeriod."""
 
-    def resolve(self) -> Line:
-        return super()._resolve(Line)
-
-
-class OperatingPeriod(Element):
-    def __repr__(self) -> str:
-        return (
-            f"OperatingPeriod(start_date={self.start_date!r}, "
-            f"end_date={self.end_date!r})"
-        )
-
-    @property
-    def start_date(self) -> Optional[date]:
-        path = "StartDate"
-        date_str = self.find_text(path)
-        if date_str is not None:
-            return datetime.fromisoformat(date_str).date()
-
-        return None
-
-    @property
-    def end_date(self) -> Optional[date]:
-        path = "EndDate"
-        date_str = self.find_text(path)
-        if date_str is not None:
-            return datetime.fromisoformat(date_str).date()
-
-        return None
+    start_date: date
+    end_date: Optional[date]
 
 
+class Line(BaseElement):
+    """A class representing a TransXChange Line."""
+
+    line_name: str
+    outbound_description: Optional[OutboundDescription]
+
+
+class StandardService(BaseElement):
+    """A class representing a StandardService."""
+
+    origin: str
+    destination: str
+    use_all_stop_points: Optional[bool]
+    journey_pattern: List[JourneyPattern] = []
+    vias: List[str] = []
+
+
+class Service(BaseElement):
+    """A class representing a Service."""
+
+    service_code: str
+    lines: List[Line]
+    operating_period: OperatingPeriod
+    ticket_machine_service_code: Optional[str]
+    registered_operator_ref: str
+    public_use: bool
+    standard_service: StandardService
+
+
+"""
 class DayOfWeek(Enum):
     monday = "Monday"
     tuesday = "Tuesday"
@@ -60,9 +62,6 @@ class DayOfWeek(Enum):
 
     @classmethod
     def from_weekday_int(cls, weekday: int) -> "DayOfWeek":
-        """Create DayOfWeek object from zero-based integer, compatible with
-        library method date.weekday()
-        """
         map = {
             0: cls.monday,
             1: cls.tuesday,
@@ -102,60 +101,7 @@ class OperatingProfile(Element):
         return applicable_days
 
 
-class StandardService(Element):
-    def __repr__(self) -> str:
-        return (
-            f"StandardService(origin={self.origin!r}, "
-            f"destination={self.destination!r})"
-        )
-
-    @property
-    def origin(self) -> Optional[str]:
-        path = "Origin"
-        return self.find_text(path)
-
-    @property
-    def destination(self) -> Optional[str]:
-        path = "Destination"
-        return self.find_text(path)
-
-    @property
-    def use_all_stop_points(self) -> Optional[bool]:
-        path = "UseAllStopPoints"
-        result = self.find_text(path)
-        if result is not None:
-            return result == "true"
-
-        return None
-
-    @property
-    def journey_patterns(self) -> List[JourneyPattern]:
-        path = "JourneyPattern"
-        return [JourneyPattern(element) for element in self.find_all(path)]
-
-
 class Service(Element):
-    def __repr__(self) -> str:
-        return f"Service(service_code={self.service_code!r})"
-
-    @property
-    def service_code(self) -> Optional[str]:
-        path = "ServiceCode"
-        return self.find_text(path)
-
-    @property
-    def lines(self) -> List[Line]:
-        path = "Lines/Line"
-        return [Line(element) for element in self.find_all(path)]
-
-    @property
-    def operating_period(self) -> Optional[OperatingPeriod]:
-        path = "OperatingPeriod"
-        element = self.find(path)
-        if element is not None:
-            return OperatingPeriod(element)
-        return None
-
     @property
     def operating_profile(self) -> Optional[OperatingProfile]:
         path = "OperatingProfile"
@@ -163,15 +109,4 @@ class Service(Element):
         if element is not None:
             return OperatingProfile(element)
         return None
-
-    @property
-    def standard_services(self) -> List[StandardService]:
-        path = "StandardService"
-        return [StandardService(element) for element in self.find_all(path)]
-
-
-class ServiceRef(Ref):
-    path = "Services/Service"
-
-    def resolve(self) -> Service:
-        return super()._resolve(Service)
+"""

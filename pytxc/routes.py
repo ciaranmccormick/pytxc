@@ -1,135 +1,57 @@
-from typing import Dict, List, Optional, Tuple, Union
+"""routes.py."""
+from typing import Dict, List, Tuple, Union
 
 from shapely.geometry import LineString, mapping
 
-from .elements import Element, Ref
-from .links import From, To
+from pytxc.elements import BaseElement
+from pytxc.links import From, To
+from pytxc.locations import Location
 
 Coordinates = Tuple[Tuple[float]]
 GeoValue = Union[str, Coordinates]
 
 
-class Location(Element):
-    @property
-    def longitude(self) -> Optional[float]:
-        path = "Longitude"
-        value = self.find_text(path)
-        if value is not None:
-            return float(value)
-        return None
+class Route(BaseElement):
+    """A class representing a TransXChange Route."""
 
-    @property
-    def latitude(self) -> Optional[float]:
-        path = "Latitude"
-        value = self.find_text(path)
-        if value is not None:
-            return float(value)
-        return None
-
-    def to_list(self) -> List[float]:
-        if self.longitude is not None and self.latitude is not None:
-            return [self.longitude, self.latitude]
-        return []
+    private_code: str
+    description: str
+    route_section_ref: str
 
 
-class Track(Element):
-    @property
-    def mapping(self):
-        path = "Mapping/Location"
-        return [Location(element) for element in self.find_all(path)]
+class Mapping(BaseElement):
+    """A class representing a TransXChange Mapping node."""
 
-    def to_list(self) -> List[List[float]]:
-        return [location.to_list() for location in self.mapping]
+    location: List[Location]
 
     def to_geojson(self) -> Dict[str, GeoValue]:
-        line = LineString(self.to_list())
-        return mapping(line)
+        """Return a geojson feature."""
+        return mapping(LineString(self.to_list()))
+
+    def to_list(self) -> List[List[float]]:
+        """Return a list of locations represented as a list of floats."""
+        return [location.to_list() for location in self.location]
 
 
-class RouteLink(Element):
-    def __repr__(self) -> str:
-        return f"RouteLink(id={self.id!r})"
+class Track(BaseElement):
+    """A class representing a TransXChange Track node."""
 
-    @property
-    def from_(self) -> Optional[From]:
-        path = "From"
-        element = self.find(path)
-        if element is not None:
-            return From(element)
-        return None
-
-    @property
-    def to(self) -> Optional[To]:
-        path = "To"
-        element = self.find(path)
-        if element is not None:
-            return To(element)
-        return None
-
-    @property
-    def distance(self) -> Optional[int]:
-        path = "Distance"
-        distance = self.find_text(path)
-        if distance is not None:
-            return int(distance)
-        return None
-
-    @property
-    def track(self) -> Optional[Track]:
-        path = "Track"
-        element = self.find(path)
-        if element is not None:
-            return Track(element)
-        return None
+    mapping: Mapping
 
 
-class RouteLinkRef(Ref):
-    path = "RouteSections/RouteSection/RouteLink"
+class RouteLink(BaseElement):
+    """A class representing a TransXChange RouteLink."""
 
-    def resolve(self) -> RouteLink:
-        return super()._resolve(RouteLink)
+    from_: From
+    to: To
+    distance: int
+    track: Track
 
-
-class RouteSection(Element):
-    def __repr__(self) -> str:
-        return f"RouteSection(id={self.id!r})"
-
-    @property
-    def route_links(self) -> List[RouteLink]:
-        path = "RouteLink"
-        return [RouteLink(element) for element in self.find_all(path)]
+    class Config:
+        fields = {"from_": "from"}
 
 
-class RouteSectionRef(Ref):
-    path = "RouteSections/RouteSection"
+class RouteSection(BaseElement):
+    """A class representing a TransXChange RouteSection."""
 
-    def resolve(self) -> RouteSection:
-        return super()._resolve(RouteSection)
-
-
-class Route(Element):
-    def __repr__(self) -> str:
-        return (
-            f"Route(private_code={self.private_code!r}, "
-            f"description={self.description!r})"
-        )
-
-    @property
-    def private_code(self):
-        return self.find_text("PrivateCode")
-
-    @property
-    def description(self):
-        return self.find_text("Description")
-
-    @property
-    def route_section_refs(self) -> List[RouteSectionRef]:
-        refs = self.find_all("RouteSectionRef")
-        return [RouteSectionRef(ref) for ref in refs]
-
-
-class RouteRef(Ref):
-    path = "Routes/Route"
-
-    def resolve(self) -> Route:
-        return super()._resolve(Route)
+    route_link: List[RouteLink]

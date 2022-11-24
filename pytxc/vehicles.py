@@ -1,120 +1,92 @@
+"""vehicles.py"""
 from datetime import time
 from typing import List, Optional
 
-from .elements import Element
-from .journeys import JourneyPatternRef, JourneyPatternTimingLinkRef
-from .operators import OperatorRef
-from .services import LineRef, OperatingProfile, ServiceRef
+from pytxc.elements import BaseElement, BaseEnum
 
 
-class Block(Element):
-    @property
-    def description(self) -> Optional[str]:
-        return self.find_text("Description")
+class Block(BaseElement):
+    """A class representing a Block node."""
 
-    @property
-    def block_number(self) -> Optional[str]:
-        return self.find_text("BlockNumber")
+    description: str
+    block_number: str
 
 
-class TicketMachine(Element):
-    @property
-    def journey_code(self) -> Optional[str]:
-        path = "JourneyCode"
-        return self.find_text(path)
+class TicketMachine(BaseElement):
+    """A class representing a TicketMachine."""
+
+    journey_code: str
 
 
-class Operational(Element):
-    @property
-    def block(self):
-        path = "Block"
-        element = self.find(path)
-        if element is not None:
-            return Block(element)
-        return None
+class Operational(BaseElement):
+    """A class representing a TransXChange Operational node."""
 
-    @property
-    def ticket_machine(self):
-        path = "TicketMachine"
-        element = self.find(path)
-        if element is not None:
-            return TicketMachine(element)
-        return None
+    ticket_machine: TicketMachine
+    block: Optional[Block]
 
 
-class VehicleJourneyTimingLink(Element):
-    @property
-    def run_time(self) -> Optional[str]:
-        path = "RunTime"
-        return self.find_text(path)
+class BankHoliday(BaseEnum):
+    boxing_day = "BoxingDay"
+    boxing_day_holiday = "BoxingDayHoliday"
+    christmas_day = "ChristmasDay"
+    christmas_day_holiday = "ChristmasDayHoliday"
+    christmas_eve = "ChristmasEve"
+    easter_monday = "EasterMonday"
+    good_friday = "GoodFriday"
+    late_summer_bank_holiday = "LateSummerBankHoliday"
+    late_summer_bank_holiday_not_scotland = "LateSummerBankHolidayNotScotland"
+    may_day = "MayDay"
+    new_years_day = "NewYearsDay"
+    new_years_day_holiday = "NewYearsDayHoliday"
+    new_years_eve = "NewYearsEve"
+    spring_bank = "SpringBank"
 
-    @property
-    def journey_pattern_timing_link_ref(self) -> Optional[JourneyPatternTimingLinkRef]:
-        path = "JourneyPatternTimingLinkRef"
-        return self._create_ref(path, JourneyPatternTimingLinkRef)
+
+class BankHolidayOperation(BaseElement):
+    days_of_operation: List[BankHoliday] = []
+    days_of_non_operation: List[BankHoliday] = []
 
 
-class VehicleJourney(Element):
-    @property
-    def private_code(self) -> Optional[str]:
-        path = "PrivateCode"
-        return self.find_text(path)
+class DayOfWeek(BaseEnum):
+    monday = "Monday"
+    tuesday = "Tuesday"
+    wednesday = "Wednesday"
+    thursday = "Thursday"
+    friday = "Friday"
+    saturday = "Saturday"
+    sunday = "Sunday"
 
-    @property
-    def direction(self) -> Optional[str]:
-        path = "Direction"
-        return self.find_text(path)
 
-    @property
-    def operational(self) -> Optional[Operational]:
-        path = "Operational"
-        element = self.find(path)
-        if element is not None:
-            return Operational(element)
-        return None
+class RegularDayType(BaseElement):
+    days_of_week: List[DayOfWeek] = []
+    holidays_only: bool = False
 
-    @property
-    def vehicle_journey_code(self) -> Optional[str]:
-        path = "VehicleJourneyCode"
-        return self.find_text(path)
 
-    @property
-    def service_ref(self) -> Optional[ServiceRef]:
-        path = "ServiceRef"
-        return self._create_ref(path, ServiceRef)
+class OperatingProfile(BaseElement):
+    """A class representing a TransXChange OperatingProfile."""
 
-    @property
-    def line_ref(self) -> Optional[LineRef]:
-        path = "LineRef"
-        return self._create_ref(path, LineRef)
+    regular_day_type: RegularDayType
+    bank_holiday_operation: Optional[BankHolidayOperation]
 
-    @property
-    def operator_ref(self) -> Optional[OperatorRef]:
-        path = "OperatorRef"
-        return self._create_ref(path, OperatorRef)
 
-    @property
-    def journey_pattern_ref(self) -> Optional[JourneyPatternRef]:
-        path = "JourneyPatternRef"
-        return self._create_ref(path, JourneyPatternRef)
+class VehicleJourneyTimingLink(BaseElement):
+    """A class representing a TransXChange VehicleJourneyTimingLink."""
 
-    @property
-    def departure_time(self) -> Optional[time]:
-        path = "DepartureTime"
-        departure = self.find_text(path)
-        if departure is not None:
-            return time.fromisoformat(departure)
-        return None
+    journey_pattern_timing_link_ref: str
+    run_time: str
 
-    @property
-    def timing_links(self) -> List[VehicleJourneyTimingLink]:
-        path = "VehicleJourneyTimingLink"
-        return [VehicleJourneyTimingLink(element) for element in self.find_all(path)]
 
-    @property
-    def operating_profile(self) -> Optional[OperatingProfile]:
-        path = "OperatingProfile"
-        element = self.find(path)
-        if element is not None:
-            return OperatingProfile(element)
-        return None
+class VehicleJourney(BaseElement):
+    """A class representing a VehicleJourney node."""
+
+    departure_time: time
+    direction: str
+    operating_profile: OperatingProfile
+    operational: Operational
+    private_code: Optional[str]
+    vehicle_journey_code: str
+    vehicle_journey_timing_link: List[VehicleJourneyTimingLink]
+    service_ref: str
+    line_ref: str
+    journey_pattern_ref: str
+    operator_ref: str

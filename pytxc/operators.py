@@ -1,42 +1,25 @@
-from typing import Optional
+"""operators.py."""
+from typing import List
 
-from .elements import Element, Ref
-
-
-class Operator(Element):
-    @property
-    def national_operator_code(self) -> Optional[str]:
-        path = "NationalOperatorCode"
-        return self.find_text(path)
-
-    @property
-    def operator_code(self) -> Optional[str]:
-        path = "OperatorCode"
-        return self.find_text(path)
-
-    @property
-    def operator_short_name(self) -> Optional[str]:
-        path = "OperatorShortName"
-        return self.find_text(path)
-
-    @property
-    def operator_name_on_licence(self) -> Optional[str]:
-        path = "OperatorNameOnLicence"
-        return self.find_text(path)
-
-    @property
-    def trading_name(self) -> Optional[str]:
-        path = "TradingName"
-        return self.find_text(path)
-
-    @property
-    def licence_number(self) -> Optional[str]:
-        path = "LicenceNumber"
-        return self.find_text(path)
+from pytxc.elements import BaseElement
+from pytxc.locations import Location
 
 
-class OperatorRef(Ref):
-    path = "Operators/Operator"
+class Garage(BaseElement):
+    """A class representing a TransXChange Garage."""
 
-    def resolve(self) -> Operator:
-        return super()._resolve(Operator)
+    garage_code: str
+    garage_name: str
+    location: Location
+
+
+class Operator(BaseElement):
+    """A class representing a TransXChange Operator."""
+
+    national_operator_code: str
+    operator_code: str
+    operator_short_name: str
+    operator_name_on_licence: str
+    trading_name: str
+    licence_number: str
+    garages: List[Garage]

@@ -1,41 +1,22 @@
+"""links.py"""
 from typing import Optional
 
-from .elements import Element
+from pytxc.elements import BaseElement
 
 
-class Link(Element):
-    @property
-    def sequence_number(self) -> Optional[int]:
-        key = "SequenceNumber"
-        value = self.attributes.get(key, None)
-        if value is not None:
-            return int(value)
-        return None
+class Link(BaseElement):
+    """A class representing a TransXChange Link node."""
 
-    @property
-    def activity(self) -> Optional[str]:
-        path = "Activity"
-        return self.find_text(path)
-
-    @property
-    def dynamic_destination_display(self) -> Optional[str]:
-        path = "DynamicDestinationDisplay"
-        return self.find_text(path)
-
-    @property
-    def stop_point_ref(self) -> Optional[str]:
-        path = "StopPointRef"
-        return self.find_text(path)
-
-    @property
-    def timing_status(self) -> Optional[str]:
-        path = "TimingStatus"
-        return self.find_text(path)
+    stop_point_ref: str
+    activity: Optional[str]
+    dynamic_destination_display: Optional[str]
+    timing_status: Optional[str]
+    fare_stage_number: Optional[int]
 
 
 class From(Link):
-    pass
+    """A class representing a From element."""
 
 
 class To(Link):
-    pass
+    """A class representing a To element."""
