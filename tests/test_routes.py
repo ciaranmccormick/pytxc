@@ -1,122 +1,88 @@
 from lxml import etree
 
-from pytxc import Timetable
-from pytxc.routes import Location, RouteLink, Track
+from pytxc.routes import Route, RouteLink, RouteSection
+from tests.constants import NSPACE
 
 
-def test_route_links(txc_file):
-    timetable = Timetable.from_file(txc_file)
-    sections = timetable.route_sections
-    assert len(sections) > 0
-    links = sections[0].route_links
-    assert len(links) == 49
-    track = links[0].track
-    assert track is not None
-    assert len(track.mapping) == 32
-    first_location = track.mapping[0]
-    last_location = track.mapping[-1]
-    assert first_location.longitude == -1.312878
-    assert first_location.latitude == 54.562472
-    assert last_location.longitude == -1.313024
-    assert last_location.latitude == 54.567029
-
-
-def test_route_sections(txc_file):
-    timetable = Timetable.from_file(txc_file)
-    route_sections = timetable.route_sections
-    assert len(route_sections) == 3
-    first_section = route_sections[0]
-    assert len(first_section.route_links) == 49
-    first_link = first_section.route_links[0]
-    from_ = first_link.from_
-    assert from_ is not None
-    assert from_.stop_point_ref == "077072002S"
-    to = first_link.to
-    assert to is not None
-    assert to.stop_point_ref == "077072001X"
-    assert first_link.distance == 516
-
-
-def test_route(txc_file):
-    timetable = Timetable.from_file(txc_file)
-    routes = timetable.routes
-    route = routes[0]
-    assert route.private_code == "35st-39"
-    assert route.id == "RT39"
-    assert route.description == "Stockton - Wolviston Court"
-    ref = route.route_section_refs[0]
-    assert ref.text == "RS1"
-    route_section = ref.resolve()
-    assert route_section is not None
-    assert route_section.id == "RS1"
-    assert route_section.route_links[0].id == "RL1"
-    parent = route_section.route_links[0].get_parent()
-    assert parent is not None
-    assert parent.id == route_section.id
-
-
-def test_location_none_children():
-    location_str = """
-    <Location id="L1" xmlns="http://www.transxchange.org.uk/">
-    </Location>
+def test_parse_route(snapshot):
+    """Can we parse a well formed Route."""
+    xml = f"""
+    <Route {NSPACE} id="RT39" CreationDateTime="2020-11-22T11:00:00"
+        ModificationDateTime="2021-12-17T11:08:35"
+        Modification="revise" RevisionNumber="159">
+      <PrivateCode>35st-39</PrivateCode>
+      <Description>Stockton - Wolviston Court</Description>
+      <RouteSectionRef>RS1</RouteSectionRef>
+    </Route>
     """
-    element = etree.fromstring(location_str)
-    location = Location(element)
-    assert location.longitude is None
-    assert location.latitude is None
+    element = etree.fromstring(xml)
+    route = Route.from_txc(element)
+    snapshot.assert_match(route.json())
 
 
-def test_route_link_none():
-    route_link_str = """
-    <RouteLink id="RL1" xmlns="http://www.transxchange.org.uk/">
-    </RouteLink>
+def test_parse_route_no_description(snapshot):
+    """Can we parse a Route without a Description."""
+    xml = f"""
+    <Route {NSPACE} id="RT39" CreationDateTime="2020-11-22T11:00:00"
+        ModificationDateTime="2021-12-17T11:08:35"
+        Modification="revise" RevisionNumber="159">
+      <PrivateCode>35st-39</PrivateCode>
+      <RouteSectionRef>RS1</RouteSectionRef>
+    </Route>
     """
-    element = etree.fromstring(route_link_str)
-    route_link = RouteLink(element=element)
-    assert route_link.from_ is None
-    assert route_link.to is None
-    assert route_link.distance is None
-    assert route_link.track is None
-    assert route_link
+    element = etree.fromstring(xml)
+    route = Route.from_txc(element)
+    snapshot.assert_match(route.json())
 
 
-def test_track_to_geojson():
-    track_str = """
-    <Track xmlns="http://www.transxchange.org.uk/">
-        <Mapping>
-            <Location id="L1">
-                <Longitude>-2.225187</Longitude>
-                <Latitude>52.193115</Latitude>
-            </Location>
-            <Location id="L2">
-                <Longitude>-2.225790</Longitude>
-                <Latitude>52.192899</Latitude>
-            </Location>
-            <Location id="L3">
-                <Longitude>-2.225790</Longitude>
-                <Latitude>52.192899</Latitude>
-            </Location>
-        </Mapping>
-    </Track>
+def test_parse_route_link_no_mapping(snapshot):
+    """Can we parse a RouteLink without a Track element."""
+    xml = f"""
+      <RouteLink {NSPACE} id="RL113" CreationDateTime="2020-11-22T11:00:00"
+        ModificationDateTime="2021-12-17T11:08:35" Modification="revise"
+        RevisionNumber="159">
+        <From>
+          <StopPointRef>077072746A</StopPointRef>
+        </From>
+        <To>
+          <StopPointRef>077072574B</StopPointRef>
+        </To>
+        <Distance>696</Distance>
+      </RouteLink>
     """
-    element = etree.fromstring(track_str)
-    track = Track(element=element)
-    expected_geojson = {
-        "type": "LineString",
-        "coordinates": (
-            (-2.225187, 52.193115),
-            (-2.225790, 52.192899),
-            (-2.225790, 52.192899),
-        ),
-    }
-    assert track.to_geojson() == expected_geojson
+    element = etree.fromstring(xml)
+    route = RouteLink.from_txc(element)
+    snapshot.assert_match(route.json())
 
 
-def test_location_missing_values():
-    location_str = """
-    <Location id="L1" xmlns="http://www.transxchange.org.uk/">
-    </Location>
+def test_parase_route_section(snapshot):
+    """Can we parse a route section containing well formed route links."""
+    xml = f"""
+    <RouteSection {NSPACE} id="RS1">
+      <RouteLink id="RL113" CreationDateTime="2020-11-22T11:00:00"
+        ModificationDateTime="2021-12-17T11:08:35" Modification="revise"
+        RevisionNumber="159">
+        <From>
+          <StopPointRef>077072746A</StopPointRef>
+        </From>
+        <To>
+          <StopPointRef>077072574B</StopPointRef>
+        </To>
+        <Distance>696</Distance>
+      </RouteLink>
+      <RouteLink id="RL2" CreationDateTime="2020-11-22T11:00:00"
+        ModificationDateTime="2021-12-17T11:08:35" Modification="revise"
+        RevisionNumber="159">
+        <From>
+          <StopPointRef>077072001X</StopPointRef>
+        </From>
+        <To>
+          <StopPointRef>077072405B</StopPointRef>
+        </To>
+        <Distance>172</Distance>
+      </RouteLink>
+    </RouteSection>
     """
-    element = etree.fromstring(location_str)
-    location = Location(element=element)
-    assert [] == location.to_list()
+    element = etree.fromstring(xml)
+    route = RouteSection.from_txc(element)
+    snapshot.assert_match(route.json())
