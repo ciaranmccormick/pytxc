@@ -9,7 +9,7 @@ from pytxc.locations import Track
 class Route(BaseElement):
     """A class representing a TransXChange Route."""
 
-    private_code: str
+    private_code: Optional[str]
     description: Optional[str]
     route_section_ref: str
 

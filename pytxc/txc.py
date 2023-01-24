@@ -2,12 +2,12 @@
 from typing import List
 
 from pytxc.elements import BaseElement
-from pytxc.journeys import JourneyPatternSection
+from pytxc.journeys.patterns import JourneyPatternSection
+from pytxc.journeys.vehicles import VehicleJourney
 from pytxc.operators import Operator
 from pytxc.routes import Route, RouteSection
 from pytxc.services import Service
 from pytxc.stops import AnnotatedStopPointRef
-from pytxc.vehicles import VehicleJourney
 
 
 class TransXChange(BaseElement):

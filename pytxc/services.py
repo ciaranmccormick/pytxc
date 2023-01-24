@@ -3,14 +3,14 @@ from datetime import date
 from typing import List, Optional
 
 from pytxc.elements import BaseElement
-from pytxc.journeys import JourneyPattern
+from pytxc.journeys.patterns import JourneyPattern
 
 
 class OutboundDescription(BaseElement):
     """A class representing an OutboundDescription node."""
 
-    origin: str
-    destination: str
+    origin: Optional[str]
+    destination: Optional[str]
     description: str
 
 

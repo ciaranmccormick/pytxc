@@ -11471,25 +11471,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -11631,7 +11631,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -11643,21 +11643,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -11799,25 +11799,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -12039,7 +12039,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -12051,21 +12051,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -12287,25 +12287,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -12527,7 +12527,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -12539,21 +12539,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -12775,25 +12775,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -13015,7 +13015,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -13027,21 +13027,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -13263,25 +13263,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -13503,7 +13503,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -13515,21 +13515,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -13751,25 +13751,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -13991,7 +13991,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -14003,21 +14003,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -14239,25 +14239,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -14479,7 +14479,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -14491,21 +14491,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -14727,25 +14727,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -14967,7 +14967,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -14979,21 +14979,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -15215,25 +15215,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -15455,7 +15455,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -15467,21 +15467,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -15703,25 +15703,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -15943,7 +15943,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -15955,21 +15955,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -16191,25 +16191,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -16431,7 +16431,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -16443,21 +16443,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -16679,25 +16679,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -16919,7 +16919,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -16931,21 +16931,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -17167,25 +17167,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -17407,7 +17407,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -17419,21 +17419,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -17655,25 +17655,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -17895,7 +17895,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -17907,21 +17907,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -18143,25 +18143,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -18383,7 +18383,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -18395,21 +18395,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -18631,25 +18631,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -18871,7 +18871,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -18883,21 +18883,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -19119,25 +19119,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -19359,7 +19359,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -19371,21 +19371,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -19607,25 +19607,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -19847,7 +19847,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -19859,21 +19859,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -20095,25 +20095,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -20335,7 +20335,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -20347,21 +20347,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -20583,25 +20583,25 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -20755,7 +20755,7 @@
       </Operational>
       <OperatingProfile>
         <RegularDayType>
-          <HolidaysOnly/>
+          <HolidaysOnly />
         </RegularDayType>
         <SpecialDaysOperation>
           <DaysOfOperation>
@@ -20767,21 +20767,21 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfOperation>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
           </DaysOfOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -20936,24 +20936,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Sunday/>
+            <Sunday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -21096,24 +21096,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Sunday/>
+            <Sunday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -21336,24 +21336,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Sunday/>
+            <Sunday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -21576,24 +21576,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Sunday/>
+            <Sunday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -21816,24 +21816,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Sunday/>
+            <Sunday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -22056,24 +22056,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Sunday/>
+            <Sunday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -22296,24 +22296,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Sunday/>
+            <Sunday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -22536,24 +22536,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Sunday/>
+            <Sunday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -22776,24 +22776,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Sunday/>
+            <Sunday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -23016,24 +23016,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Sunday/>
+            <Sunday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -23256,11 +23256,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -23273,19 +23273,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -23428,11 +23428,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -23445,19 +23445,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -23600,11 +23600,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -23617,19 +23617,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -23772,11 +23772,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -23789,19 +23789,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -24024,11 +24024,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -24041,19 +24041,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -24276,11 +24276,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -24293,19 +24293,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -24528,11 +24528,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -24545,19 +24545,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -24780,11 +24780,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -24797,19 +24797,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -25032,11 +25032,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -25049,19 +25049,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -25284,11 +25284,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -25301,19 +25301,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -25536,11 +25536,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -25553,19 +25553,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -25788,11 +25788,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -25805,19 +25805,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -26040,11 +26040,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -26057,19 +26057,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -26292,11 +26292,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -26309,19 +26309,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -26544,11 +26544,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -26561,19 +26561,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -26796,11 +26796,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -26813,19 +26813,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -27048,11 +27048,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -27065,19 +27065,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -27300,11 +27300,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -27317,19 +27317,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -27552,11 +27552,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -27569,19 +27569,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -27804,11 +27804,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -27821,19 +27821,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -28056,11 +28056,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -28073,19 +28073,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -28308,11 +28308,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -28325,19 +28325,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -28492,11 +28492,11 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Monday/>
-            <Tuesday/>
-            <Wednesday/>
-            <Thursday/>
-            <Friday/>
+            <Monday />
+            <Tuesday />
+            <Wednesday />
+            <Thursday />
+            <Friday />
           </DaysOfWeek>
         </RegularDayType>
         <SpecialDaysOperation>
@@ -28509,19 +28509,19 @@
         </SpecialDaysOperation>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -28676,24 +28676,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -28836,24 +28836,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -29076,24 +29076,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -29316,24 +29316,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -29556,24 +29556,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -29796,24 +29796,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -30036,24 +30036,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -30276,24 +30276,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -30516,24 +30516,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -30756,24 +30756,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -30996,24 +30996,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -31236,24 +31236,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -31476,24 +31476,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -31716,24 +31716,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -31956,24 +31956,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -32196,24 +32196,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -32436,24 +32436,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -32676,24 +32676,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -32916,24 +32916,24 @@
       <OperatingProfile>
         <RegularDayType>
           <DaysOfWeek>
-            <Saturday/>
+            <Saturday />
           </DaysOfWeek>
         </RegularDayType>
         <BankHolidayOperation>
           <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
+            <ChristmasDay />
+            <BoxingDay />
+            <GoodFriday />
+            <NewYearsDay />
+            <LateSummerBankHolidayNotScotland />
+            <MayDay />
+            <EasterMonday />
+            <SpringBank />
+            <ChristmasDayHoliday />
+            <BoxingDayHoliday />
+            <NewYearsDayHoliday />
+            <ChristmasEve />
+            <NewYearsEve />
           </DaysOfNonOperation>
         </BankHolidayOperation>
       </OperatingProfile>
@@ -32943,6 +32943,7 @@
       <LineRef>SCTE:PB0001987:221:35:</LineRef>
       <JourneyPatternRef>JP2</JourneyPatternRef>
       <DepartureTime>16:46:00</DepartureTime>
+
       <VehicleJourneyTimingLink id="VJTL4343">
         <JourneyPatternTimingLinkRef>JPTL31</JourneyPatternTimingLinkRef>
         <RunTime>PT2M0S</RunTime>
@@ -33148,35 +33149,6 @@
       <PrivateCode>35stSA:I:0:642:-MtRD7pV24k=</PrivateCode>
       <OperatorRef>1</OperatorRef>
       <Direction>outbound</Direction>
-      <Operational>
-        <TicketMachine>
-          <JourneyCode>43</JourneyCode>
-        </TicketMachine>
-      </Operational>
-      <OperatingProfile>
-        <RegularDayType>
-          <DaysOfWeek>
-            <Saturday/>
-          </DaysOfWeek>
-        </RegularDayType>
-        <BankHolidayOperation>
-          <DaysOfNonOperation>
-            <ChristmasDay/>
-            <BoxingDay/>
-            <GoodFriday/>
-            <NewYearsDay/>
-            <LateSummerBankHolidayNotScotland/>
-            <MayDay/>
-            <EasterMonday/>
-            <SpringBank/>
-            <ChristmasDayHoliday/>
-            <BoxingDayHoliday/>
-            <NewYearsDayHoliday/>
-            <ChristmasEve/>
-            <NewYearsEve/>
-          </DaysOfNonOperation>
-        </BankHolidayOperation>
-      </OperatingProfile>
       <GarageRef>NEST</GarageRef>
       <VehicleJourneyCode>VJ1382</VehicleJourneyCode>
       <ServiceRef>PB0001987:221</ServiceRef>

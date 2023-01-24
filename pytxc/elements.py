@@ -198,7 +198,7 @@ class BaseElement(BaseModel):
     attributes: Optional[Attributes]
 
     @classmethod
-    def from_txc(cls, node: _Element) -> "BaseElement":
+    def from_txc(cls, node: _Element):
         """Return a BaseElement object from an lxml element."""
         return TransXChangeBuilder(cls, node).build()
 

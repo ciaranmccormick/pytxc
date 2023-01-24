@@ -1,5 +1,6 @@
-"""vehicles.py"""
-from datetime import time
+"""operational.py"""
+
+
 from typing import List, Optional
 
 from pytxc.elements import BaseElement, BaseEnum
@@ -26,6 +27,8 @@ class Operational(BaseElement):
 
 
 class BankHoliday(BaseEnum):
+    """A class for representing BankHolidays."""
+
     boxing_day = "BoxingDay"
     boxing_day_holiday = "BoxingDayHoliday"
     christmas_day = "ChristmasDay"
@@ -43,11 +46,15 @@ class BankHoliday(BaseEnum):
 
 
 class BankHolidayOperation(BaseElement):
+    """A class representing BankHolidayOperations."""
+
     days_of_operation: List[BankHoliday] = []
     days_of_non_operation: List[BankHoliday] = []
 
 
 class DayOfWeek(BaseEnum):
+    """A class representing DayOfWeek."""
+
     monday = "Monday"
     tuesday = "Tuesday"
     wednesday = "Wednesday"
@@ -58,6 +65,8 @@ class DayOfWeek(BaseEnum):
 
 
 class RegularDayType(BaseElement):
+    """A class representing a RegularDayType."""
+
     days_of_week: List[DayOfWeek] = []
     holidays_only: bool = False
 
@@ -67,26 +76,3 @@ class OperatingProfile(BaseElement):
 
     regular_day_type: RegularDayType
     bank_holiday_operation: Optional[BankHolidayOperation]
-
-
-class VehicleJourneyTimingLink(BaseElement):
-    """A class representing a TransXChange VehicleJourneyTimingLink."""
-
-    journey_pattern_timing_link_ref: str
-    run_time: str
-
-
-class VehicleJourney(BaseElement):
-    """A class representing a VehicleJourney node."""
-
-    departure_time: time
-    direction: str
-    operating_profile: OperatingProfile
-    operational: Operational
-    private_code: Optional[str]
-    vehicle_journey_code: str
-    vehicle_journey_timing_link: List[VehicleJourneyTimingLink]
-    service_ref: str
-    line_ref: str
-    journey_pattern_ref: str
-    operator_ref: str

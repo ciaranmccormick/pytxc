@@ -1,6 +1,6 @@
 from lxml import etree
 
-from pytxc.journeys import (
+from pytxc.journeys.patterns import (
     JourneyPattern,
     JourneyPatternSection,
     JourneyPatternTimingLink,
