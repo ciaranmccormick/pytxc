@@ -1,7 +1,7 @@
 """txc.py."""
 from typing import List
 
-from pytxc.elements import BaseElement
+from pytxc.base import BaseTxCElement
 from pytxc.journeys.patterns import JourneyPatternSection
 from pytxc.journeys.vehicles import VehicleJourney
 from pytxc.operators import Operator
@@ -10,7 +10,7 @@ from pytxc.services import Service
 from pytxc.stops import AnnotatedStopPointRef
 
 
-class TransXChange(BaseElement):
+class TransXChange(BaseTxCElement):
     """A class representing a TransXChange document."""
 
     stop_points: List[AnnotatedStopPointRef] = []

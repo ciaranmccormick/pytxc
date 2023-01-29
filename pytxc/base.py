@@ -1,5 +1,5 @@
 import re
-from datetime import datetime, time
+from datetime import date, datetime, time
 from typing import Any, Dict, Optional, Type, TypeVar, Union
 
 from lxml.etree import fromstring, tostring
@@ -13,6 +13,7 @@ HANDLERS = {
     bool: lambda text: bool(text),
     time: lambda text: time.fromisoformat(text),
     datetime: lambda text: datetime.fromisoformat(text),
+    date: lambda text: date.fromisoformat(text),
 }
 
 
@@ -127,7 +128,7 @@ class BaseTxCElement(BaseModel):
                 # int, string, datetime, float
                 type_ = model_field.type_
                 func = HANDLERS[type_]
-                fields[name] = func(child.text.strip())
+                fields[name] = func(child.text.strip())  # type: ignore
 
         attributes = cls._populate_attributes(element)
         if attributes:

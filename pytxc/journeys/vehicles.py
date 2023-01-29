@@ -3,7 +3,6 @@ from datetime import time
 from typing import List, Optional
 
 from pytxc.base import BaseTxCElement
-from pytxc.journeys.operations import OperatingProfile
 
 
 class VehicleJourneyTimingLink(BaseTxCElement):
@@ -18,8 +17,6 @@ class VehicleJourney(BaseTxCElement):
 
     departure_time: time
     direction: Optional[str]
-    operating_profile: Optional[OperatingProfile]
-    # operational: Optional[Operational]
     private_code: Optional[str]
     vehicle_journey_code: str
     vehicle_journey_timing_link: Optional[List[VehicleJourneyTimingLink]]

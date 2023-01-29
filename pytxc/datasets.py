@@ -2,7 +2,7 @@
 import zipfile
 from collections import OrderedDict
 from pathlib import Path
-from typing import IO, AnyStr, List, Optional, Union, cast
+from typing import IO, List, Optional
 
 from pytxc.txc import TransXChange
 
@@ -37,7 +37,9 @@ class Dataset:
             filenames = [name for name in zip_file.namelist() if name.endswith("xml")]
             for filename in filenames:
                 with zip_file.open(filename) as txc_file:
-                    timetables.append(TransXChange.from_file(txc_file))
+                    timetables.append(
+                        TransXChange.from_string(txc_file.read().decode("utf-8"))
+                    )
         return cls(timetables)
 
     @classmethod
@@ -52,16 +54,16 @@ class Dataset:
         return cls.from_zip_path(Path(path))
 
     @classmethod
-    def from_xml_file(cls, xml_file: Union[IO[AnyStr], IO[bytes]]) -> "Dataset":
+    def from_xml_file(cls, xml_file: str) -> "Dataset":
         """Return a Dataset from an xml file."""
-        timetable = cast(TransXChange, TransXChange.from_file(xml_file))
+        timetable = TransXChange.from_string(xml_file)
         return cls([timetable])
 
     @classmethod
     def from_xml_file_path(cls, path: Path) -> "Dataset":
         """Return a Dataset from an xml file path."""
-        with path.open("r") as xml_file:
-            return cls.from_xml_file(xml_file)
+        with path.open("r", encoding="utf-8") as xml_file:
+            return cls.from_xml_file(xml_file.read())
 
     @classmethod
     def from_xml_file_path_str(cls, path: str) -> "Dataset":

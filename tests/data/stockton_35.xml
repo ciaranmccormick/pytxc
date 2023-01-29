@@ -1,5 +1,3 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!--Created by Optibus TransXChange Exporter (1.0.2)-->
 <TransXChange xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.transxchange.org.uk/" CreationDateTime="2020-11-22T11:00:00" FileName="35st-None--SCTE-ST-2021-12-12-TXC_SOT_PB_ALL_20211121-BODS_V1_1.xml" Modification="revise" ModificationDateTime="2021-12-17T11:08:35" RegistrationDocument="false" RevisionNumber="159" SchemaVersion="2.4" xsi:schemaLocation="http://www.transxchange.org.uk/ http://www.transxchange.org.uk/schema/2.4/TransXChange_general.xsd">
   <StopPoints>
     <AnnotatedStopPointRef>

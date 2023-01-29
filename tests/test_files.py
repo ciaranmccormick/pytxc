@@ -15,7 +15,8 @@ class TestStagecoachCheseterLine1:
     @pytest.fixture()
     def timetable(self):
         file_path = DATA_DIR / "1-None--STCR-CZ-2021-10-03-TXC_CZ20211003-BODS_V1_1.xml"
-        timetable = TransXChange.from_file_path(file_path)
+        with file_path.open("r", encoding="utf-8") as f:
+            timetable = TransXChange.from_string(f.read())
         yield timetable
 
     def test_header_details(self, snapshot, timetable: TransXChange):
