@@ -49,29 +49,36 @@ class Attributes(BaseModel):
 
 
 class BaseTxCElement(BaseModel):
-    attributes: Attributes
+    attributes: Optional[Attributes]
 
     @staticmethod
-    def _populate_attributes(element) -> Attributes:
+    def _populate_attributes(element) -> Optional[Attributes]:
         attrs = {}
         if element.attrib:
             attrs = {
                 pascal_to_snake(attrib_key): attrib_value
                 for attrib_key, attrib_value in element.attrib.items()
             }
-        return Attributes.parse_obj(attrs)
+            return Attributes.parse_obj(attrs)
+        else:
+            return None
 
     @classmethod
     def from_string(cls: Type[T], string: str) -> T:
         element = fromstring(string)
-        attrs = {"attributes": cls._populate_attributes(element)}
-        for child in element.getchildren():
+        fields = {}
+        for child in element.getchildren():  # type: ignore
             name = pascal_to_snake(remove_namespace(child.tag))
             model_field = cls.__fields__[name]
 
             if model_field.is_complex():
-                attrs[name] = model_field.type_.from_string(tostring(child))
+                fields[name] = model_field.type_.from_string(tostring(child))
             else:
                 type_ = model_field.type_
-                attrs[name] = type_(child.text.strip())
-        return cls.parse_obj(attrs)
+                fields[name] = type_(child.text.strip())
+
+        attributes = cls._populate_attributes(element)
+        if attributes:
+            fields["attributes"] = attributes
+
+        return cls.parse_obj(fields)

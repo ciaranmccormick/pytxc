@@ -3,13 +3,14 @@ from typing import Dict, List, Tuple, Union
 
 from shapely.geometry import LineString, mapping
 
+from pytxc.base import BaseTxCElement
 from pytxc.elements import BaseElement
 
 Coordinates = Tuple[Tuple[float]]
 GeoValue = Union[str, Coordinates]
 
 
-class Location(BaseElement):
+class Location(BaseTxCElement):
     """A class representing a TransXChange Location."""
 
     longitude: float

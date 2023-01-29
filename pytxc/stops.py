@@ -2,6 +2,7 @@
 from typing import Optional
 
 from pytxc.base import BaseTxCElement
+from pytxc.locations import Location
 
 
 class AnnotatedStopPointRef(BaseTxCElement):
@@ -9,3 +10,4 @@ class AnnotatedStopPointRef(BaseTxCElement):
 
     common_name: Optional[str] = None
     stop_point_ref: str
+    location: Optional[Location] = None
