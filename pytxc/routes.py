@@ -1,12 +1,12 @@
 """routes.py."""
 from typing import List, Optional
 
-from pytxc.elements import BaseElement
+from pytxc.base import BaseTxCElement
 from pytxc.links import From, To
 from pytxc.locations import Track
 
 
-class Route(BaseElement):
+class Route(BaseTxCElement):
     """A class representing a TransXChange Route."""
 
     private_code: Optional[str]
@@ -14,7 +14,7 @@ class Route(BaseElement):
     route_section_ref: str
 
 
-class RouteLink(BaseElement):
+class RouteLink(BaseTxCElement):
     """A class representing a TransXChange RouteLink."""
 
     from_: From
@@ -26,7 +26,7 @@ class RouteLink(BaseElement):
         fields = {"from_": "from"}
 
 
-class RouteSection(BaseElement):
+class RouteSection(BaseTxCElement):
     """A class representing a TransXChange RouteSection."""
 
     route_link: List[RouteLink]

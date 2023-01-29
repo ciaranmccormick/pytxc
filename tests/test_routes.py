@@ -1,12 +1,10 @@
-from lxml import etree
-
 from pytxc.routes import Route, RouteLink, RouteSection
 from tests.constants import NSPACE
 
 
 def test_parse_route(snapshot):
     """Can we parse a well formed Route."""
-    xml = f"""
+    string = f"""
     <Route {NSPACE} id="RT39" CreationDateTime="2020-11-22T11:00:00"
         ModificationDateTime="2021-12-17T11:08:35"
         Modification="revise" RevisionNumber="159">
@@ -15,14 +13,13 @@ def test_parse_route(snapshot):
       <RouteSectionRef>RS1</RouteSectionRef>
     </Route>
     """
-    element = etree.fromstring(xml)
-    route = Route.from_txc(element)
+    route = Route.from_string(string)
     snapshot.assert_match(route.json())
 
 
 def test_parse_route_no_description(snapshot):
     """Can we parse a Route without a Description."""
-    xml = f"""
+    string = f"""
     <Route {NSPACE} id="RT39" CreationDateTime="2020-11-22T11:00:00"
         ModificationDateTime="2021-12-17T11:08:35"
         Modification="revise" RevisionNumber="159">
@@ -30,14 +27,13 @@ def test_parse_route_no_description(snapshot):
       <RouteSectionRef>RS1</RouteSectionRef>
     </Route>
     """
-    element = etree.fromstring(xml)
-    route = Route.from_txc(element)
+    route = Route.from_string(string)
     snapshot.assert_match(route.json())
 
 
 def test_parse_route_link_no_mapping(snapshot):
-    """Can we parse a RouteLink without a Track element."""
-    xml = f"""
+    """Can we parse a RouteLink without a Track string."""
+    string = f"""
       <RouteLink {NSPACE} id="RL113" CreationDateTime="2020-11-22T11:00:00"
         ModificationDateTime="2021-12-17T11:08:35" Modification="revise"
         RevisionNumber="159">
@@ -50,14 +46,13 @@ def test_parse_route_link_no_mapping(snapshot):
         <Distance>696</Distance>
       </RouteLink>
     """
-    element = etree.fromstring(xml)
-    route = RouteLink.from_txc(element)
+    route = RouteLink.from_string(string)
     snapshot.assert_match(route.json())
 
 
 def test_parase_route_section(snapshot):
     """Can we parse a route section containing well formed route links."""
-    xml = f"""
+    string = f"""
     <RouteSection {NSPACE} id="RS1">
       <RouteLink id="RL113" CreationDateTime="2020-11-22T11:00:00"
         ModificationDateTime="2021-12-17T11:08:35" Modification="revise"
@@ -83,6 +78,5 @@ def test_parase_route_section(snapshot):
       </RouteLink>
     </RouteSection>
     """
-    element = etree.fromstring(xml)
-    route = RouteSection.from_txc(element)
+    route = RouteSection.from_string(string)
     snapshot.assert_match(route.json())
