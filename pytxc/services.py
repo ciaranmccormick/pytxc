@@ -2,11 +2,11 @@
 from datetime import date
 from typing import List, Optional
 
-from pytxc.elements import BaseElement
+from pytxc.base import BaseTxCElement
 from pytxc.journeys.patterns import JourneyPattern
 
 
-class OutboundDescription(BaseElement):
+class OutboundDescription(BaseTxCElement):
     """A class representing an OutboundDescription node."""
 
     origin: Optional[str]
@@ -14,21 +14,21 @@ class OutboundDescription(BaseElement):
     description: str
 
 
-class OperatingPeriod(BaseElement):
+class OperatingPeriod(BaseTxCElement):
     """A class representing an OperatingPeriod."""
 
     start_date: date
     end_date: Optional[date]
 
 
-class Line(BaseElement):
+class Line(BaseTxCElement):
     """A class representing a TransXChange Line."""
 
     line_name: str
     outbound_description: Optional[OutboundDescription]
 
 
-class StandardService(BaseElement):
+class StandardService(BaseTxCElement):
     """A class representing a StandardService."""
 
     origin: str
@@ -38,7 +38,7 @@ class StandardService(BaseElement):
     vias: List[str] = []
 
 
-class Service(BaseElement):
+class Service(BaseTxCElement):
     """A class representing a Service."""
 
     service_code: str
