@@ -2,24 +2,24 @@
 from datetime import time
 from typing import List, Optional
 
-from pytxc.elements import BaseElement
-from pytxc.journeys.operations import OperatingProfile, Operational
+from pytxc.base import BaseTxCElement
+from pytxc.journeys.operations import OperatingProfile
 
 
-class VehicleJourneyTimingLink(BaseElement):
+class VehicleJourneyTimingLink(BaseTxCElement):
     """A class representing a TransXChange VehicleJourneyTimingLink."""
 
     journey_pattern_timing_link_ref: str
     run_time: str
 
 
-class VehicleJourney(BaseElement):
+class VehicleJourney(BaseTxCElement):
     """A class representing a VehicleJourney node."""
 
     departure_time: time
     direction: Optional[str]
     operating_profile: Optional[OperatingProfile]
-    operational: Optional[Operational]
+    # operational: Optional[Operational]
     private_code: Optional[str]
     vehicle_journey_code: str
     vehicle_journey_timing_link: Optional[List[VehicleJourneyTimingLink]]

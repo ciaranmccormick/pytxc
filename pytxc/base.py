@@ -1,5 +1,5 @@
 import re
-from datetime import datetime
+from datetime import datetime, time
 from typing import Any, Dict, Optional, Type, TypeVar, Union
 
 from lxml.etree import fromstring, tostring
@@ -7,10 +7,12 @@ from pydantic import BaseModel
 from pydantic.fields import SHAPE_LIST, ModelField
 
 HANDLERS = {
-    str: lambda el: str(el.text),
-    int: lambda el: int(el.text),
-    float: lambda el: float(el.text),
-    bool: lambda el: bool(el.text),
+    str: lambda text: str(text),
+    int: lambda text: int(text),
+    float: lambda text: float(text),
+    bool: lambda text: bool(text),
+    time: lambda text: time.fromisoformat(text),
+    datetime: lambda text: datetime.fromisoformat(text),
 }
 
 
@@ -124,7 +126,8 @@ class BaseTxCElement(BaseModel):
             else:
                 # int, string, datetime, float
                 type_ = model_field.type_
-                fields[name] = type_(child.text.strip())
+                func = HANDLERS[type_]
+                fields[name] = func(child.text.strip())
 
         attributes = cls._populate_attributes(element)
         if attributes:
