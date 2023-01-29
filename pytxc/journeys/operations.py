@@ -3,23 +3,24 @@
 
 from typing import List, Optional
 
-from pytxc.elements import BaseElement, BaseEnum
+from pytxc.base import BaseTxCElement
+from pytxc.elements import BaseEnum
 
 
-class Block(BaseElement):
+class Block(BaseTxCElement):
     """A class representing a Block node."""
 
     description: str
     block_number: str
 
 
-class TicketMachine(BaseElement):
+class TicketMachine(BaseTxCElement):
     """A class representing a TicketMachine."""
 
     journey_code: str
 
 
-class Operational(BaseElement):
+class Operational(BaseTxCElement):
     """A class representing a TransXChange Operational node."""
 
     ticket_machine: TicketMachine
@@ -45,7 +46,7 @@ class BankHoliday(BaseEnum):
     spring_bank = "SpringBank"
 
 
-class BankHolidayOperation(BaseElement):
+class BankHolidayOperation(BaseTxCElement):
     """A class representing BankHolidayOperations."""
 
     days_of_operation: List[BankHoliday] = []
@@ -64,14 +65,14 @@ class DayOfWeek(BaseEnum):
     sunday = "Sunday"
 
 
-class RegularDayType(BaseElement):
+class RegularDayType(BaseTxCElement):
     """A class representing a RegularDayType."""
 
     days_of_week: List[DayOfWeek] = []
     holidays_only: bool = False
 
 
-class OperatingProfile(BaseElement):
+class OperatingProfile(BaseTxCElement):
     """A class representing a TransXChange OperatingProfile."""
 
     regular_day_type: RegularDayType
