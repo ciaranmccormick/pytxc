@@ -1,9 +1,10 @@
 import re
 from datetime import datetime
-from typing import Optional, Type, TypeVar, Union
+from typing import Any, Dict, Optional, Type, TypeVar, Union
 
 from lxml.etree import fromstring, tostring
 from pydantic import BaseModel
+from pydantic.fields import SHAPE_LIST
 
 HANDLERS = {
     str: lambda el: str(el.text),
@@ -66,16 +67,24 @@ class BaseTxCElement(BaseModel):
     @classmethod
     def from_string(cls: Type[T], string: str) -> T:
         element = fromstring(string)
-        fields = {}
+        fields: Dict[str, Any] = {}
+
         for child in element.getchildren():  # type: ignore
             name = pascal_to_snake(remove_namespace(child.tag))
             model_field = cls.__fields__[name]
 
-            if model_field.is_complex():
+            if model_field.shape == SHAPE_LIST:
+                items = fields.get(name, [])
+                items.append(model_field.type_.from_string(tostring(child)))
+                fields[name] = items
+                continue
+            elif model_field.is_complex():
                 fields[name] = model_field.type_.from_string(tostring(child))
+                continue
             else:
                 type_ = model_field.type_
                 fields[name] = type_(child.text.strip())
+                continue
 
         attributes = cls._populate_attributes(element)
         if attributes:

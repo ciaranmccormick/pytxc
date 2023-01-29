@@ -1,14 +1,10 @@
-from typing import cast
-
-from lxml import etree
-
 from pytxc.locations import Mapping, Track
 from tests.constants import NSPACE
 
 
 def test_parsing_track(snapshot):
     """Can we parse a track with a mapping structure."""
-    xml = f"""
+    string = f"""
         <Track {NSPACE}>
           <Mapping>
             <Location id="L1">
@@ -30,14 +26,13 @@ def test_parsing_track(snapshot):
           </Mapping>
         </Track>
     """
-    element = etree.fromstring(xml)
-    track = Track.from_txc(element)
+    track = Track.from_string(string)
     snapshot.assert_match(track.json())
 
 
 def test_mapping_to_geojson(snapshot):
     """Can we parse a Mapping object and export to geojson?"""
-    xml = f"""
+    string = f"""
           <Mapping {NSPACE}>
             <Location id="L1">
               <Longitude>-1.312878</Longitude>
@@ -57,6 +52,5 @@ def test_mapping_to_geojson(snapshot):
             </Location>
           </Mapping>
     """
-    element = etree.fromstring(xml)
-    mapping = cast(Mapping, Mapping.from_txc(element))
+    mapping = Mapping.from_string(string)
     snapshot.assert_match(mapping.to_geojson())

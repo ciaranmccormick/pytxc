@@ -4,7 +4,6 @@ from typing import Dict, List, Tuple, Union
 from shapely.geometry import LineString, mapping
 
 from pytxc.base import BaseTxCElement
-from pytxc.elements import BaseElement
 
 Coordinates = Tuple[Tuple[float]]
 GeoValue = Union[str, Coordinates]
@@ -21,7 +20,7 @@ class Location(BaseTxCElement):
         return [self.longitude, self.latitude]
 
 
-class Mapping(BaseElement):
+class Mapping(BaseTxCElement):
     """A class representing a TransXChange Mapping node."""
 
     location: List[Location]
@@ -35,7 +34,7 @@ class Mapping(BaseElement):
         return [location.to_list() for location in self.location]
 
 
-class Track(BaseElement):
+class Track(BaseTxCElement):
     """A class representing a TransXChange Track node."""
 
     mapping: Mapping
