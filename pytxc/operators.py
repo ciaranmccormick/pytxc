@@ -1,11 +1,11 @@
 """operators.py."""
 from typing import List, Optional
 
-from pytxc.elements import BaseElement
+from pytxc.base import BaseTxCElement
 from pytxc.locations import Location
 
 
-class Garage(BaseElement):
+class Garage(BaseTxCElement):
     """A class representing a TransXChange Garage."""
 
     garage_code: str
@@ -13,7 +13,7 @@ class Garage(BaseElement):
     location: Location
 
 
-class Operator(BaseElement):
+class Operator(BaseTxCElement):
     """A class representing a TransXChange Operator."""
 
     national_operator_code: str

@@ -1,5 +1,3 @@
-from lxml import etree
-
 from pytxc.operators import Operator
 
 NSPACE = 'xmlns="http://www.transxchange.org.uk/"'
@@ -7,7 +5,7 @@ NSPACE = 'xmlns="http://www.transxchange.org.uk/"'
 
 def test_parsing_operators(snapshot):
     """Verify that a well structured Operator is parsed correctly."""
-    xml = f"""
+    string = f"""
     <Operator {NSPACE} id="1" CreationDateTime="2020-11-22T11:00:00"
         ModificationDateTime="2021-12-17T11:08:35" Modification="revise"
         RevisionNumber="159">
@@ -37,14 +35,13 @@ def test_parsing_operators(snapshot):
       </Garages>
     </Operator>
     """
-    element = etree.fromstring(xml)
-    operator = Operator.from_txc(element)
+    operator = Operator.from_string(string)
     snapshot.assert_match(operator.json())
 
 
 def test_parsing_operators_missing_elements(snapshot):
     """We still want Operator to parse even with some optional elements missing."""
-    xml = f"""
+    string = f"""
     <Operator {NSPACE} id="1" CreationDateTime="2020-11-22T11:00:00"
         ModificationDateTime="2021-12-17T11:08:35" Modification="revise"
         RevisionNumber="159">
@@ -53,6 +50,5 @@ def test_parsing_operators_missing_elements(snapshot):
       <LicenceNumber>PB0001987</LicenceNumber>
     </Operator>
     """
-    element = etree.fromstring(xml)
-    operator = Operator.from_txc(element)
+    operator = Operator.from_string(string)
     snapshot.assert_match(operator.json())
