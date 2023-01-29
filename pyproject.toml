@@ -22,7 +22,7 @@ flake8 = "^4.0.1"
 ipdb = "^0.13.9"
 ipython = "^8.0.1"
 isort = "^5.10.1"
-mypy = "^0.920"
+mypy = "^0.991"
 pip-audit = "^2.4.5"
 pre-commit = "^2.16.0"
 
