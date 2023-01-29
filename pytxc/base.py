@@ -4,7 +4,7 @@ from typing import Any, Dict, Optional, Type, TypeVar, Union
 
 from lxml.etree import fromstring, tostring
 from pydantic import BaseModel
-from pydantic.fields import SHAPE_LIST
+from pydantic.fields import SHAPE_LIST, ModelField
 
 HANDLERS = {
     str: lambda el: str(el.text),
@@ -15,6 +15,32 @@ HANDLERS = {
 
 
 RESERVED_WORDS = ["from"]
+
+
+def is_pseudo_array(model_field: ModelField):
+    """Return True if field is a pseduo-array.
+
+    In TransXChange there are elements that hold list of child elements with
+    a similar name,
+    e.g
+    <Operators>
+        <Operator></Operator>
+        <Operator></Operator>
+    </Operators>
+
+    But there are also elements that hold a list child elements with different names,
+    e.g.
+    <RouteSection>
+        <RouteLink></RouteLink>
+        <RouteLink></RouteLink>
+        <RouteLink></RouteLink>
+    </RouteSection>
+
+    These 2 scenarios are handled separately since in our Models
+    operators: List[Operator] and route_section: List[RouteLink]
+
+    """
+    return pascal_to_snake(model_field.type_.__name__) == model_field.name
 
 
 def remove_namespace(string: str) -> str:
@@ -83,18 +109,22 @@ class BaseTxCElement(BaseModel):
             if not model_field:
                 continue
 
-            if model_field.shape == SHAPE_LIST:
+            if model_field.shape == SHAPE_LIST and is_pseudo_array(model_field):
                 items = fields.get(name, [])
                 items.append(model_field.type_.from_string(tostring(child)))
                 fields[name] = items
-                continue
+            elif model_field.shape == SHAPE_LIST and not is_pseudo_array(model_field):
+                type_ = model_field.type_
+                fields[name] = [
+                    type_.from_string(tostring(el)) for el in child.iterchildren()
+                ]
             elif model_field.is_complex():
+                # complex type i.e. <Operator>...</Operator>
                 fields[name] = model_field.type_.from_string(tostring(child))
-                continue
             else:
+                # int, string, datetime, float
                 type_ = model_field.type_
                 fields[name] = type_(child.text.strip())
-                continue
 
         attributes = cls._populate_attributes(element)
         if attributes:
