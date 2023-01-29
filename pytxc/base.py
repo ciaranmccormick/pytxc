@@ -14,6 +14,9 @@ HANDLERS = {
 }
 
 
+RESERVED_WORDS = ["from"]
+
+
 def remove_namespace(string: str) -> str:
     end = string.find("}") + 1
     return string[end:]
@@ -71,7 +74,14 @@ class BaseTxCElement(BaseModel):
 
         for child in element.getchildren():  # type: ignore
             name = pascal_to_snake(remove_namespace(child.tag))
-            model_field = cls.__fields__[name]
+
+            if name in RESERVED_WORDS:
+                model_field = cls.__fields__.get(f"{name}_")
+            else:
+                model_field = cls.__fields__.get(name)
+
+            if not model_field:
+                continue
 
             if model_field.shape == SHAPE_LIST:
                 items = fields.get(name, [])

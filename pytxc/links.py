@@ -1,10 +1,10 @@
 """links.py"""
 from typing import Optional
 
-from pytxc.elements import BaseElement
+from pytxc.base import BaseTxCElement
 
 
-class Link(BaseElement):
+class Link(BaseTxCElement):
     """A class representing a TransXChange Link node."""
 
     stop_point_ref: str

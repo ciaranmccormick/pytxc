@@ -1,5 +1,3 @@
-from lxml import etree
-
 from pytxc.journeys.patterns import (
     JourneyPattern,
     JourneyPatternSection,
@@ -10,7 +8,7 @@ from tests.constants import NSPACE
 
 def test_journey_pattern(snapshot):
     """Can we parse a well formed JourneyPattern."""
-    xml = f"""
+    string = f"""
     <JourneyPattern {NSPACE} id="JP1" CreationDateTime="2020-11-22T11:00:00"
       ModificationDateTime="2021-12-17T11:08:35" Modification="revise"
       RevisionNumber="159">
@@ -21,14 +19,13 @@ def test_journey_pattern(snapshot):
       <JourneyPatternSectionRefs>JPS94</JourneyPatternSectionRefs>
     </JourneyPattern>
     """
-    element = etree.fromstring(xml)
-    journey_pattern = JourneyPattern.from_txc(element)
-    snapshot.assert_match(journey_pattern.dict())
+    journey_pattern = JourneyPattern.from_string(string)
+    snapshot.assert_match(journey_pattern.json())
 
 
 def test_parsing_journey_pattern_sections(snapshot):
     """Can we parse a well formed JourneyPatternSection."""
-    xml = f"""
+    string = f"""
     <JourneyPatternSection {NSPACE} id="JPS95">
       <JourneyPatternTimingLink id="JPTL31">
         <From SequenceNumber="1" id="JPSU61">
@@ -49,14 +46,13 @@ def test_parsing_journey_pattern_sections(snapshot):
       </JourneyPatternTimingLink>
     </JourneyPatternSection>
     """
-    element = etree.fromstring(xml)
-    journey_pattern = JourneyPatternSection.from_txc(element)
-    snapshot.assert_match(journey_pattern.dict())
+    journey_pattern = JourneyPatternSection.from_string(string)
+    snapshot.assert_match(journey_pattern.json())
 
 
 def test_parse_journey_pattern_timing_link(snapshot):
     """Can we parse a well formed JourneyPatternTimingLink."""
-    xml = f"""
+    string = f"""
       <JourneyPatternTimingLink {NSPACE} id="JPTL32">
         <From SequenceNumber="2" id="JPSU63">
           <Activity>pickUpAndSetDown</Activity>
@@ -74,6 +70,5 @@ def test_parse_journey_pattern_timing_link(snapshot):
         <RunTime>PT0M0S</RunTime>
       </JourneyPatternTimingLink>
     """
-    element = etree.fromstring(xml)
-    timing_link = JourneyPatternTimingLink.from_txc(element)
+    timing_link = JourneyPatternTimingLink.from_string(string)
     snapshot.assert_match(timing_link.json())

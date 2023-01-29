@@ -1,15 +1,15 @@
 """journeys.py."""
 from typing import List
 
-from pytxc.elements import BaseElement
+from pytxc.base import BaseTxCElement
 from pytxc.links import From, To
 
 
-class JourneyPatternTimingLink(BaseElement):
+class JourneyPatternTimingLink(BaseTxCElement):
     """Class representing a JourneyPatternTimingLink."""
 
     from_: From
-    to_: To
+    to: To
     route_link_ref: str
     run_time: str
 
@@ -17,13 +17,13 @@ class JourneyPatternTimingLink(BaseElement):
         fields = {"from_": "from"}
 
 
-class JourneyPatternSection(BaseElement):
+class JourneyPatternSection(BaseTxCElement):
     """Class representing a JourneyPatternSection."""
 
     journey_pattern_timing_link: List[JourneyPatternTimingLink]
 
 
-class JourneyPattern(BaseElement):
+class JourneyPattern(BaseTxCElement):
     """Class representing a JourneyPattern."""
 
     destination_display: str
