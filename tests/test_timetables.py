@@ -21,4 +21,4 @@ def test_timetable_from_file_path(snapshot):
     stockton = data_dir / "stockton_35.xml"
     with stockton.open("r", encoding="utf-8") as file_:
         timetable = TransXChange.from_string(file_.read())
-    snapshot.assert_match(timetable.json())
+    snapshot.assert_match(timetable.json(indent=2))

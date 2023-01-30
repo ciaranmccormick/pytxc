@@ -20,7 +20,7 @@ def test_journey_pattern(snapshot):
     </JourneyPattern>
     """
     journey_pattern = JourneyPattern.from_string(string)
-    snapshot.assert_match(journey_pattern.json())
+    snapshot.assert_match(journey_pattern.json(indent=2))
 
 
 def test_parsing_journey_pattern_sections(snapshot):
@@ -47,7 +47,7 @@ def test_parsing_journey_pattern_sections(snapshot):
     </JourneyPatternSection>
     """
     journey_pattern = JourneyPatternSection.from_string(string)
-    snapshot.assert_match(journey_pattern.json())
+    snapshot.assert_match(journey_pattern.json(indent=2))
 
 
 def test_parse_journey_pattern_timing_link(snapshot):
@@ -71,4 +71,4 @@ def test_parse_journey_pattern_timing_link(snapshot):
       </JourneyPatternTimingLink>
     """
     timing_link = JourneyPatternTimingLink.from_string(string)
-    snapshot.assert_match(timing_link.json())
+    snapshot.assert_match(timing_link.json(indent=2))

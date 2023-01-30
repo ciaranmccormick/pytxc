@@ -47,4 +47,4 @@ def test_parsing_operating_period(snapshot):
       </OperatingProfile>
     """
     operational = OperatingProfile.from_string(string)
-    snapshot.assert_match(operational.json())
+    snapshot.assert_match(operational.json(indent=2))

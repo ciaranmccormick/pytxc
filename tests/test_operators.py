@@ -36,7 +36,7 @@ def test_parsing_operators(snapshot):
     </Operator>
     """
     operator = Operator.from_string(string)
-    snapshot.assert_match(operator.json())
+    snapshot.assert_match(operator.json(indent=2))
 
 
 def test_parsing_operators_missing_elements(snapshot):
@@ -51,4 +51,4 @@ def test_parsing_operators_missing_elements(snapshot):
     </Operator>
     """
     operator = Operator.from_string(string)
-    snapshot.assert_match(operator.json())
+    snapshot.assert_match(operator.json(indent=2))

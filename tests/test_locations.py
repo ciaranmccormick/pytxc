@@ -27,7 +27,7 @@ def test_parsing_track(snapshot):
         </Track>
     """
     track = Track.from_string(string)
-    snapshot.assert_match(track.json())
+    snapshot.assert_match(track.json(indent=2))
 
 
 def test_mapping_to_geojson(snapshot):

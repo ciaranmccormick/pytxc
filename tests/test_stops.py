@@ -12,7 +12,7 @@ def test_loading_annotated_stop_point_refs(snapshot):
     </AnnotatedStopPointRef>
     """
     stop = AnnotatedStopPointRef.from_string(string)
-    snapshot.assert_match(stop.json())
+    snapshot.assert_match(stop.json(indent=2))
 
 
 def test_no_common_name(snapshot):
@@ -23,7 +23,7 @@ def test_no_common_name(snapshot):
     </AnnotatedStopPointRef>
     """
     stop = AnnotatedStopPointRef.from_string(string)
-    snapshot.assert_match(stop.json())
+    snapshot.assert_match(stop.json(indent=2))
 
 
 def test_stops_with_location(snapshot):
@@ -39,4 +39,4 @@ def test_stops_with_location(snapshot):
     </AnnotatedStopPointRef>
     """
     stop = AnnotatedStopPointRef.from_string(string)
-    snapshot.assert_match(stop.json())
+    snapshot.assert_match(stop.json(indent=2))

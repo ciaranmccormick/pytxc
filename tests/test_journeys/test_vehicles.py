@@ -19,4 +19,4 @@ def test_vehicle_journey(snapshot):
     </VehicleJourney>
     """
     vehicle_journey = VehicleJourney.from_string(string)
-    snapshot.assert_match(vehicle_journey.json())
+    snapshot.assert_match(vehicle_journey.json(indent=2))

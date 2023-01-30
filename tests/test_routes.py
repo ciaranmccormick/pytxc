@@ -14,7 +14,7 @@ def test_parse_route(snapshot):
     </Route>
     """
     route = Route.from_string(string)
-    snapshot.assert_match(route.json())
+    snapshot.assert_match(route.json(indent=2))
 
 
 def test_parse_route_no_description(snapshot):
@@ -28,7 +28,7 @@ def test_parse_route_no_description(snapshot):
     </Route>
     """
     route = Route.from_string(string)
-    snapshot.assert_match(route.json())
+    snapshot.assert_match(route.json(indent=2))
 
 
 def test_parse_route_link_no_mapping(snapshot):
@@ -47,7 +47,7 @@ def test_parse_route_link_no_mapping(snapshot):
       </RouteLink>
     """
     route = RouteLink.from_string(string)
-    snapshot.assert_match(route.json())
+    snapshot.assert_match(route.json(indent=2))
 
 
 def test_parase_route_section(snapshot):
@@ -79,4 +79,4 @@ def test_parase_route_section(snapshot):
     </RouteSection>
     """
     route = RouteSection.from_string(string)
-    snapshot.assert_match(route.json())
+    snapshot.assert_match(route.json(indent=2))

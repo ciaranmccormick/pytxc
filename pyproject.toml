@@ -50,30 +50,5 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.coverage.run]
-parallel = true
 branch = true
 source = ["pytxc"]
-
-[tool.coverage.paths]
-source = ["pytxc", ".tox/py*/**/site-packages"]
-
-[tool.coverage.report]
-show_missing = true
-skip_covered = true
-omit = ["**/snapshottest/**"]
-exclude_lines = [
-    # a more strict default pragma
-    "\\# pragma: no cover\\b",
-
-    # allow defensive code
-    "^\\s*raise AssertionError\\b",
-    "^\\s*raise NotImplementedError\\b",
-    "^\\s*return NotImplemented\\b",
-    "^\\s*raise$",
-
-    # typing-related code
-    "^if (False|TYPE_CHECKING):",
-    ": \\.\\.\\.(\\s*#.*)?$",
-    "^ +\\.\\.\\.$",
-    "-> ['\"]?NoReturn['\"]?:",
-]
